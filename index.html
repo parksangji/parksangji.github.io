@@ -1,23 +1,49 @@
----
----
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Obsidian Notes</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
+    <title>{{ page.title }}</title> <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-  <div class="container"> <h1>My Notes</h1>
+    <div class="three-column-layout">
 
-    {% assign notes_by_category = site.notes | group_by: 'category' %}
+        <aside class="left-sidebar">
+            <div class="profile">
+                <h3>프로필</h3>
+                <p>당신의 프로필 정보...</p>
+            </div>
 
-    {% for category_group in notes_by_category %}
-      <h2>{{ category_group.name }}</h2>
-      <ul>
-        {% for note in category_group.items %}
-          <li><a href="{{ note.url }}">{{ note.title }}</a></li>
-        {% endfor %}
-      </ul>
-    {% endfor %}
-  </div> </body>
+            <div class="categories-nav">
+                <h3>카테고리</h3>
+                {% assign notes_by_category = site.notes | group_by: 'category' %}
+
+                {% for category_group in notes_by_category %}
+                    <h4>{{ category_group.name }}</h4> {# 서브 카테고리 제목은 h4 등으로 작게 조정 #}
+                    <ul>
+                        {% for note in category_group.items %}
+                            <li><a href="{{ note.url }}">{{ note.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                {% endfor %}
+                 <p><a href="/">전체 노트 목록</a></p> {# index 페이지로 돌아가는 링크 #}
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <article>
+                <h1>{{ page.title }}</h1> {# 현재 노트의 제목 #}
+                {{ content }}
+            </article>
+        </main>
+
+        <aside class="right-sidebar">
+            <nav class="table-of-contents">
+                <h3>목차</h3>
+                {# {{ content | toc_only }} #}
+                 <ul>
+                    <li><a href="#example-section">예시 섹션</a></li>
+                    </ul>
+            </nav>
+        </aside>
+    </div>
+</body>
 </html>
