@@ -8,13 +8,10 @@
 </head>
 <body>
   <h1>My Notes</h1>
-  {% for item in site.data._notes %}
-    <h2>{{ item.title }}</h2>
-    <ul>
-      {% for post in item.docs %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-      {% endfor %}
-    </ul>
-  {% endfor %}
+  <ul>
+    {% for post in site._notes.docs %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
 </body>
 </html>
