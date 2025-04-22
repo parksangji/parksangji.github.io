@@ -1,0 +1,32 @@
+body {
+    font-family: monospace, sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 2em;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+h1, h2 {
+    color: #111;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.3em;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 1em;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+a {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #0056b3;
+}
