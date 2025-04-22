@@ -1,27 +1,32 @@
 ---
 ---
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-  <title>Comdolidol-i Tech</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comdolidol-tech</title>
   <link rel="stylesheet" href="/assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <h1>Comdolidol-i Tech</h1>
+<div class="container">
+  <h1>Comdolidol-tech</h1>
 
-    {% assign notes_by_category = site.notes | group_by: 'category' %}
+  {% assign notes_by_category = site.notes | group_by: 'category' %}
 
-    {% for category_group in notes_by_category %}
-      <div class="category-group">
-        <h2>{{ category_group.name }}</h2>
-        <ul>
-          {% for note in category_group.items %}
-            <li><a href="{{ note.url }}">{{ note.title }}</a></li>
-          {% endfor %}
-        </ul>
-      </div>
-    {% endfor %}
+  {% for category_group in notes_by_category %}
+  <div class="category-group">
+    <h2>{{ category_group.name }}</h2>
+    <ul class="note-list">
+      {% for note in category_group.items %}
+      <li class="note-item">
+        <a href="{{ note.url }}">{{ note.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
   </div>
+  {% endfor %}
+</div>
 </body>
 </html>
