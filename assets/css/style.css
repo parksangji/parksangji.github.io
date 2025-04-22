@@ -1,46 +1,71 @@
+/* 기본 스타일 및 레이아웃 */
 body {
-    font-family: monospace, sans-serif;
-    font-size: 1.1em;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; /* 좀 더 현대적인 폰트 */
     line-height: 1.6;
-    margin: 2em;
-    color: #eee;
-    background-color: #222;
+    margin: 0;
+    padding: 40px 20px; /* 상하좌우 패딩 */
+    background-color: #f8f9fa; /* 밝은 배경색 */
+    color: #333;
+    display: flex;
+    justify-content: center; /* 내용을 중앙에 배치 */
 }
 
-h1, h2 {
-    color: #eee;
-    border-bottom: 1px solid #777;
-    padding-bottom: 0.3em;
+.container {
+    width: 100%;
+    max-width: 900px; /* 최대 너비 설정 */
+    margin: 0 auto; /* 중앙 정렬 */
 }
 
+/* 제목 스타일 */
+h1 {
+    font-size: 2.8em; /* 메인 제목 크기 증가 */
+    color: #212529; /* 진한 제목 색상 */
+    text-align: center; /* 중앙 정렬 */
+    margin-bottom: 50px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e9ecef; /* 연한 밑줄 */
+}
+
+h2 {
+    font-size: 2em; /* 서브 제목 크기 */
+    color: #343a40; /* 서브 제목 색상 */
+    margin-top: 40px; /* 상단 여백 증가 */
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dee2e6; /* 더 얇은 밑줄 */
+}
+
+/* 목록 및 항목 스타일 (카드 형태) */
 ul {
-    list-style-type: none;
-    padding-left: 0;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
 }
 
 li {
-    margin-bottom: 0.6em;
+    background-color: #ffffff; /* 흰색 배경 */
+    border: 1px solid #e9ecef; /* 연한 테두리 */
+    margin-bottom: 15px;
+    padding: 18px 25px; /* 내부 패딩 증가 */
+    border-radius: 8px; /* 모서리 둥글게 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* 부드러운 그림자 */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
+li:hover {
+    transform: translateY(-5px); /* 호버 시 위로 살짝 이동 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* 호버 시 그림자 강화 */
+}
+
+/* 링크 스타일 */
 a {
-    color: #80dfff;
     text-decoration: none;
+    color: #007bff; /* 파란색 링크 색상 */
+    font-weight: normal; /* 링크 글자 굵기 보통 */
+    display: block; /* 전체 li 영역 클릭 가능하도록 */
+    font-size: 1.1em; /* 링크 텍스트 크기 */
 }
 
 a:hover {
-    text-decoration: underline;
-}
-
-main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1em;
-}
-
-p {
-    margin-bottom: 1em;
-}
-
-article {
-    margin-bottom: 2em;
+    color: #0056b3; /* 호버 시 링크 색상 변경 */
 }
