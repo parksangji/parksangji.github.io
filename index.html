@@ -1,0 +1,21 @@
+---
+---
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Obsidian Notes</title>
+</head>
+<body>
+  <h1>My Notes</h1>
+
+  {% for item in site.data.notes.categories %}
+    <h2>{{ item[0] }}</h2>
+    <ul>
+      {% for file in item[1] %}
+        <li><a href="{{ file.fullPath }}">{{ file.path }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+
+</body>
+</html>
