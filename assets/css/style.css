@@ -1,32 +1,51 @@
 body {
     font-family: monospace, sans-serif;
-    font-size: 1.1em;
-    line-height: 1.6;
+    font-size: 1.2em;
+    line-height: 1.8;
     margin: 2em;
-    color: #333;
-    background-color: #f8f8f8;
+    color: #f0f0f0; /* 밝은 텍스트 */
+    background-color: #181818; /* 어두운 배경 */
 }
 
 h1, h2 {
-    color: #111;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 0.3em;
+    color: #f0f0f0;
+    border-bottom: 1px solid #555;
+    padding-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: 1.4em;
+    margin-top: 1.5em;
 }
 
 ul {
     list-style-type: none;
-    padding-left: 1em;
+    padding-left: 0;
 }
 
 li {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.8em;
 }
 
 a {
-    color: #007bff;
-    text-decoration: underline;
+    color: #66ccff; /* 밝은 파란색 링크 */
+    text-decoration: none;
 }
 
 a:hover {
-    color: #0056b3;
+    text-decoration: underline;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+p {
+    margin-bottom: 1em;
 }
