@@ -1,24 +1,24 @@
 body {
     font-family: monospace, sans-serif;
-    font-size: 1.2em;
-    line-height: 1.8;
+    font-size: 1.1em;
+    line-height: 1.6;
     margin: 2em;
-    color: #f0f0f0; /* 밝은 텍스트 */
-    background-color: #181818; /* 어두운 배경 */
+    color: #eee; /* 밝은 회색 텍스트 */
+    background-color: #222; /* 어두운 배경 */
 }
 
 h1, h2 {
-    color: #f0f0f0;
-    border-bottom: 1px solid #555;
-    padding-bottom: 0.5em;
+    color: #eee;
+    border-bottom: 1px solid #777;
+    padding-bottom: 0.3em;
 }
 
 h1 {
-    font-size: 1.8em;
+    font-size: 1.6em;
 }
 
 h2 {
-    font-size: 1.4em;
+    font-size: 1.3em;
     margin-top: 1.5em;
 }
 
@@ -28,11 +28,11 @@ ul {
 }
 
 li {
-    margin-bottom: 0.8em;
+    margin-bottom: 0.6em;
 }
 
 a {
-    color: #66ccff; /* 밝은 파란색 링크 */
+    color: #80dfff; /* 밝은 파란색 링크 */
     text-decoration: none;
 }
 
