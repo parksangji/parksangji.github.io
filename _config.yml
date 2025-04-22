@@ -1,4 +1,4 @@
 collections:
-  notes:
+  _notes:
     output: true
-    permalink: /notes/:path
+    permalink: /_notes/:path
