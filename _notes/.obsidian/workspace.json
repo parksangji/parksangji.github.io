@@ -1,20 +1,24 @@
 {
   "main": {
-    "id": "54386ec2c605d64e",
+    "id": "6769dab5f74cb20f",
     "type": "split",
     "children": [
       {
-        "id": "9ddbdb2746517797",
+        "id": "3e97a53bc520b1a2",
         "type": "tabs",
         "children": [
           {
-            "id": "36672d241dbe9a9a",
+            "id": "df02e42954c26195",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Operation System/교착 상태 (Deadlock).md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "교착 상태 (Deadlock)"
             }
           }
         ]
@@ -23,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "b793a2c24377fee1",
+    "id": "d33c512955fe69b9",
     "type": "split",
     "children": [
       {
-        "id": "74a4762f03111283",
+        "id": "c3ef79195c02fa74",
         "type": "tabs",
         "children": [
           {
-            "id": "a49924e8063627f0",
+            "id": "aa023b0d2cd12f69",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -44,7 +48,7 @@
             }
           },
           {
-            "id": "5f81d4e0f8ca62c6",
+            "id": "63fa81abf3dc3a26",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -61,7 +65,7 @@
             }
           },
           {
-            "id": "1e84e409d55391e4",
+            "id": "9326d719b85dad48",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -74,23 +78,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 486.5124969482422
+    "width": 300
   },
   "right": {
-    "id": "3dfccd1e906577f2",
+    "id": "281fba0339fad863",
     "type": "split",
     "children": [
       {
-        "id": "89ec4d7b0dcdc3fb",
+        "id": "cc1de76a9a8e00b4",
         "type": "tabs",
         "children": [
           {
-            "id": "64faed8b55900093",
+            "id": "456e408384881f1b",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Network/IP 주소 지정(IP Addressing)과 서브네팅(Subnetting).md",
+                "file": "Operation System/교착 상태 (Deadlock).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,25 +104,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "IP 주소 지정(IP Addressing)과 서브네팅(Subnetting) 의 백링크"
+              "title": "교착 상태 (Deadlock) 의 백링크"
             }
           },
           {
-            "id": "d93d70110e111297",
+            "id": "a2ed3cd9e15cdb07",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "스터디/CS/Operation System/Round Robin, RR.md",
+                "file": "Operation System/교착 상태 (Deadlock).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Round Robin, RR 의 나가는 링크"
+              "title": "교착 상태 (Deadlock) 의 나가는 링크"
             }
           },
           {
-            "id": "6600a8e1cc889d8a",
+            "id": "112db38932dd7b54",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -133,18 +137,18 @@
             }
           },
           {
-            "id": "e16422d9ea522f7c",
+            "id": "ba779d2f0e5da09c",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "스터디/CS/Operation System/Round Robin, RR.md",
+                "file": "Operation System/교착 상태 (Deadlock).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Round Robin, RR 의 개요"
+              "title": "교착 상태 (Deadlock) 의 개요"
             }
           }
         ]
@@ -164,48 +168,33 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "a49924e8063627f0",
+  "active": "df02e42954c26195",
   "lastOpenFiles": [
-    "package.json",
-    "generateFileList.js",
-    "assets/css/style.css",
-    "assets/css",
-    "assets",
-    "_layouts/note.html",
-    "_layouts",
-    "_config.yml",
-    "_notes/스크린샷 2025-03-19 오후 5.56.10.png",
-    "무제.md",
-    "_notes",
-    "index.html",
-    "_notes/Data Structure/서로소 집합 (Disjoint Sets).md",
-    "_notes/Pasted image 20250422154903.png",
-    "Pasted image 20250422154855.png",
-    "_notes/Algorithm/프림 알고리즘 (Prim's Algorithm).md",
-    "_notes/Pasted image 20250421150632.png",
-    "_notes/Database/동시성 제어 (Concurrency Control).md",
-    "Operation System/메모리 관리 (Memory Management).md",
-    "_notes/Network/IP 주소 지정(IP Addressing)과 서브네팅(Subnetting).md",
-    "_notes/Network/HTTP (HyperText Transfer Protocol).md",
-    "_notes/Data Structure/힙 (Heap).md",
-    "_notes/Operation System/교착 상태 (Deadlock).md",
-    "_notes/Pasted image 20250415090542.png",
-    "_notes/Algorithm/다익스트라 알고리즘(Dijkstra`s Algorithm).md",
-    "_notes/JAVA/스레드 풀(Thread pool).md",
-    "_notes/Pasted image 20250414160413.png",
-    "_notes/Algorithm/너비 우선 탐색 (Breadth-First Search, BFS).md",
-    "_notes/Database/데이터베이스 정규화 (Database Normalization).md",
-    "_notes/Algorithm/깊이 우선 탐색(Depth-First Search, DFS).md",
-    "_notes/Algorithm/이진 탐색 트리 (Binary Search Tree, BST).md",
-    "무제.canvas",
-    "_notes/Pasted image 20250409165932.png",
-    "_notes/Pasted image 20250409165909.png",
-    "_notes/Pasted image 20250409165831.png",
-    "_notes/Pasted image 20250409165817.png",
-    "_notes/Algorithm/동적계획법 (Dynamic Programming, DP).md",
-    "_notes/Database/트랜잭션 격리 수준(Transaction Isolation Level).md",
-    "_notes/Database/중첩 루프 조인(Nested Loop).md",
-    "_notes/Operation System/Round Robin, RR.md",
-    "CS 1"
+    "Operation System/세마포어(Semaphore).md",
+    "Operation System/LRU (Least Recently Used) 알고리즘.md",
+    "Operation System/Round Robin, RR.md",
+    "Operation System/교착 상태 (Deadlock).md",
+    "Network/TCP 3-Way Handshake & 4-Way HandShake.md",
+    "Network/IP 주소 지정(IP Addressing)과 서브네팅(Subnetting).md",
+    "Network/HTTP (HyperText Transfer Protocol).md",
+    "Network/DNS (Domain Name System).md",
+    "JAVA/Stack 영역.md",
+    "JAVA/Set.md",
+    "JAVA/Queue.md",
+    "JAVA/PriorityQueue.md",
+    "JAVA/Heap 영역.md",
+    "JAVA/Deque.md",
+    "JAVA/Collections.md",
+    "JAVA/Arrays.md",
+    "JAVA/ArrayList.md",
+    "JAVA/스레드 풀(Thread pool).md",
+    "JAVA/가비지 컬렉션.md",
+    "Database/데이터베이스 정규화 (Database Normalization).md",
+    "Database/동시성 제어 (Concurrency Control).md",
+    "Database/머지 조인(Merge Join).md",
+    "Database/비용 분석(explain analyze).md",
+    "Database/비용 분석에 대해서.md",
+    "Database/중첩 루프 조인(Nested Loop).md",
+    "Database/트랜잭션 격리 수준(Transaction Isolation Level).md"
   ]
 }

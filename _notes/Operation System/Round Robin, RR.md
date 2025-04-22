@@ -1,4 +1,7 @@
-
+---
+title: 깊이 우선 탐색(Depth-First Search, DFS)
+category: Operation System
+---
 라운드 로빈 스케줄링은 시분할 시스템(Time-Sharing System)을 위해 설계된 대표적인 선점형(Preemptive) 스케줄링 알고리즘이다. 각 프로세스는 타임 퀀텀(Time Quantum) 또는 `타임 슬라이스(Time Slice)`라고 불리는 고정된 시간 동안만 CPU를 사용할 수 있다. 
 
 - 동작 방식: 

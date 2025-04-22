@@ -1,4 +1,7 @@
-
+---
+title: 이진 탐색 트리 (Binary Search Tree, BST)
+category: Algorithm
+---
 이진 탐색 트리는 이진 트리의 일종으로, 특정 규치에 따라 노드들이 정렬되어 있어 효율적인 탐색이 가능하도록 만든 자료구조이다. 
 
 BST 속성 (BST Property):

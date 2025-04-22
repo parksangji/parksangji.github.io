@@ -1,4 +1,7 @@
-
+---
+title: 비용 분석(explain analyze)
+category: Database
+---
 PostgreSQL의 EXPLAIN는 쿼리를 실제로 실행하기 때문에 결과가 더 정확하고, 성능 병목 현상을 파악하는데 매우 유용하다. 
 
 ```sql

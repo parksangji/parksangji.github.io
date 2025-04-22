@@ -1,3 +1,7 @@
+---
+title: 해시 조인(Hash Join)
+category: Database
+---
 Hash Join은 PostgreSQL에서 두 개 이상의 테이블을 조인하는 데 사용되는 효율적인 알고리즘 중 하나이다. [[중첩 루프 조인(Nested Loop)]] Join와 비교했을 때, 특히 큰 테이블을 조인할 때 성능상의 이점을 제공한다. 
 
 1. 빌드 단계(Build Phase)

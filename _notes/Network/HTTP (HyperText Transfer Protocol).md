@@ -1,4 +1,7 @@
-
+---
+title: HTTP (HyperText Transfer Protocol)
+category: Network
+---
 웹 브라우저와 웹 서버 간에 데이터를 주고 받기 위한 요청/응답 프로토콜이다. 
 - 비상태성(stateless): 각 요청은 독립적으로 처리되며, 이전 요청의 상태를 기억하지 않는다. (상태 유지를 위해 쿠키, 세션 등 사용)
 - 연결 지향 (Connection-Oriented  TCP 기반): 일반적으로 신뢰성 있는 TCP 연결 위에서 동작한다. 

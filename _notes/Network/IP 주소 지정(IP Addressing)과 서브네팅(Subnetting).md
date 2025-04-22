@@ -1,4 +1,7 @@
-
+---
+title: IP 주소 지정(IP Addressing)과 서브네팅(Subnetting)
+category: Network
+---
 IP 주소는 컴퓨터 네트워크에서 각 장치(컴퓨터, 서버, 라우터 등)를 식별하고 통신하기 위해 할당되는 고유한 논리적 주소이다. 현재 가장 널리 사용되는 것은 IPv4(Internet Protocol version 4)이다. 
 
 IPv4:

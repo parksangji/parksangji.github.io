@@ -1,3 +1,7 @@
+---
+title: Set
+category: JAVA
+---
 - 중복되지 않는 요소들의 집합.
 - 순서를 보장하지 않음 (HashSet).
 

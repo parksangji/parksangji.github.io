@@ -1,3 +1,7 @@
+---
+title: 머지 조인(Merge Join)
+category: Database
+---
 Merge Join은 PostgreSQL에서 두 개 이상의 테이블을 조인하는 데 사용되는 또 다른 효율적인 알고리즘이다. [[해시 조인(Hash Join)]]과 마찬가지로 [[중첩 루프 조인(Nested Loop)]] Join보다 큰 테이블 조인에 유리하지만, 작동 방식과 최적 조건이 다르다. 
 
 Merge Join은 두 테이블이 모두 조인 키를 기준으로 정렬 되어 있다는 전제하에 작동된다. 
