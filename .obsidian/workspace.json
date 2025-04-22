@@ -11,12 +11,14 @@
             "id": "e6782600ab2c77e4",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "obsidian/스크린샷 2025-03-19 오후 5.56.10.png"
+                "file": "_notes/Algorithm/깊이 우선 탐색(Depth-First Search, DFS).md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "스크린샷 2025-03-19 오후 5.56.10"
+              "icon": "lucide-file",
+              "title": "깊이 우선 탐색(Depth-First Search, DFS)"
             }
           }
         ]
@@ -76,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 259.5
+    "width": 486.5124969482422
   },
   "right": {
     "id": "3dfccd1e906577f2",
@@ -168,38 +170,46 @@
   },
   "active": "a49924e8063627f0",
   "lastOpenFiles": [
+    "package.json",
+    "generateFileList.js",
+    "assets/css/style.css",
+    "assets/css",
+    "assets",
+    "_layouts/note.html",
+    "_layouts",
+    "_config.yml",
+    "_notes/스크린샷 2025-03-19 오후 5.56.10.png",
     "무제.md",
-    "obsidian",
+    "_notes",
     "index.html",
-    "obsidian/Data Structure/서로소 집합 (Disjoint Sets).md",
-    "obsidian/Pasted image 20250422154903.png",
+    "_notes/Data Structure/서로소 집합 (Disjoint Sets).md",
+    "_notes/Pasted image 20250422154903.png",
     "Pasted image 20250422154855.png",
-    "obsidian/Algorithm/프림 알고리즘 (Prim's Algorithm).md",
-    "obsidian/Pasted image 20250421150632.png",
-    "obsidian/Database/동시성 제어 (Concurrency Control).md",
+    "_notes/Algorithm/프림 알고리즘 (Prim's Algorithm).md",
+    "_notes/Pasted image 20250421150632.png",
+    "_notes/Database/동시성 제어 (Concurrency Control).md",
     "Operation System/메모리 관리 (Memory Management).md",
-    "obsidian/Network/IP 주소 지정(IP Addressing)과 서브네팅(Subnetting).md",
-    "obsidian/Network/HTTP (HyperText Transfer Protocol).md",
-    "obsidian/Data Structure/힙 (Heap).md",
-    "obsidian/Operation System/교착 상태 (Deadlock).md",
-    "obsidian/Pasted image 20250415090542.png",
-    "obsidian/Algorithm/다익스트라 알고리즘(Dijkstra`s Algorithm).md",
-    "obsidian/JAVA/스레드 풀(Thread pool).md",
-    "obsidian/Pasted image 20250414160413.png",
-    "obsidian/Algorithm/너비 우선 탐색 (Breadth-First Search, BFS).md",
-    "obsidian/Database/데이터베이스 정규화 (Database Normalization).md",
-    "obsidian/Algorithm/깊이 우선 탐색(Depth-First Search, DFS).md",
-    "obsidian/Algorithm/이진 탐색 트리 (Binary Search Tree, BST).md",
+    "_notes/Network/IP 주소 지정(IP Addressing)과 서브네팅(Subnetting).md",
+    "_notes/Network/HTTP (HyperText Transfer Protocol).md",
+    "_notes/Data Structure/힙 (Heap).md",
+    "_notes/Operation System/교착 상태 (Deadlock).md",
+    "_notes/Pasted image 20250415090542.png",
+    "_notes/Algorithm/다익스트라 알고리즘(Dijkstra`s Algorithm).md",
+    "_notes/JAVA/스레드 풀(Thread pool).md",
+    "_notes/Pasted image 20250414160413.png",
+    "_notes/Algorithm/너비 우선 탐색 (Breadth-First Search, BFS).md",
+    "_notes/Database/데이터베이스 정규화 (Database Normalization).md",
+    "_notes/Algorithm/깊이 우선 탐색(Depth-First Search, DFS).md",
+    "_notes/Algorithm/이진 탐색 트리 (Binary Search Tree, BST).md",
     "무제.canvas",
-    "obsidian/Pasted image 20250409165932.png",
-    "obsidian/Pasted image 20250409165909.png",
-    "obsidian/Pasted image 20250409165831.png",
-    "obsidian/Pasted image 20250409165817.png",
-    "obsidian/Pasted image 20250409165719.png",
-    "obsidian/Algorithm/동적계획법 (Dynamic Programming, DP).md",
-    "obsidian/Database/트랜잭션 격리 수준(Transaction Isolation Level).md",
-    "obsidian/Database/중첩 루프 조인(Nested Loop).md",
-    "obsidian/Operation System/Round Robin, RR.md",
+    "_notes/Pasted image 20250409165932.png",
+    "_notes/Pasted image 20250409165909.png",
+    "_notes/Pasted image 20250409165831.png",
+    "_notes/Pasted image 20250409165817.png",
+    "_notes/Algorithm/동적계획법 (Dynamic Programming, DP).md",
+    "_notes/Database/트랜잭션 격리 수준(Transaction Isolation Level).md",
+    "_notes/Database/중첩 루프 조인(Nested Loop).md",
+    "_notes/Operation System/Round Robin, RR.md",
     "CS 1"
   ]
 }
