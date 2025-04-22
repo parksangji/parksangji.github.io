@@ -14,7 +14,7 @@
     <h2>{{ item[0] }}</h2>
     <ul>
       {% for file in item[1] %}
-        <li><a href="/_notes/{{ file.nameWithoutExt }}.html">{{ file.path }}</a></li>
+        <li><a href="/_notes/{{ file.nameWithoutExt }}.md">{{ file.path }}</a></li>
       {% endfor %}
     </ul>
   {% endfor %}
