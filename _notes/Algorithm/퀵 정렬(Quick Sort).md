@@ -1,6 +1,7 @@
 ---
 title: 퀵 정렬(Quick Sort)
 category: Algorithm
+layout: note
 ---
 퀵 정렬은 분할 정복(Divide And Conquer) 알고리즘의 일종으로, 평균적으로 매우 빠른 정렬 속도를 가지는 알고리즘이다. 다음 단계를 통해 정렬을 수행한다.
 

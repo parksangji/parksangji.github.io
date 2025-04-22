@@ -1,6 +1,7 @@
 ---
 title: Queue
 category: JAVA
+layout: note
 ---
 **특징:**
 

@@ -1,7 +1,9 @@
 ---
 title: 중첩 루프 조인(Nested Loop)
 category: Database
+layout: note
 ---
+
 Nested Loop Join은 두 개 이상의 테이블을 조인하는 가장 기본적인 알고리즘 중 하나이다.
 
 ```sql

@@ -1,6 +1,7 @@
 ---
 title: LRU (Least Recently Used) 알고리즘
 category: Operation System
+layout: note
 ---
 페이지 교체 알고리즘: 
 

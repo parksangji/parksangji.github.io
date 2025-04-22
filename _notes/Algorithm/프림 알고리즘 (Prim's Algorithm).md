@@ -1,7 +1,9 @@
 ---
 title: 프림 알고리즘 (Prim's Algorithm)
 category: Algorithm
+layout: note
 ---
+
 주어진 연결된, 가중치가 있는 무방향 그래프(Connected, Weighted Undirected Graph)에서 다음 조건을 만족하는 부분 그래프(Subgraph)를 말한다. 
 1. 신장 트리 (Spanning Tree): 그래프의 모든 정점(Vertex)을 포함하면서 사이클(Cycle)이 없는 트리 구조.
 2. 최소 비용 (Minimum Cost): 신장 트리를 구성하는 간선(Edge)들의 가중치 합이 가능한 모든 신장 트리 중에서 가장 작은 트리.

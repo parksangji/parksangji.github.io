@@ -1,6 +1,7 @@
 ---
 title: PriorityQueue
 category: JAVA
+layout: note
 ---
 **특징:**
 

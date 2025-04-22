@@ -1,7 +1,9 @@
 ---
 title: 동시성 제어 (Concurrency Control)
 category: Database
+layout: note
 ---
+
 동시성 제어는 여러 트랜잭션이 동시에 동일한 데이터에 접근하여 조작할 때 발생할 수 있는 문제를 방지하고 데이터의 무결성을 유지하기 위한 데이터베이스 시스템의 메커니즘이다. 이는 [[트랜잭션 격리 수준(Transaction Isolation Level)]] 과 밀접하게 관련되어 있으며, 격리 수준을 구현하는 구체적인 방법 중 하나가 잠금(Locking)이다. 
 
 동시정 제어가 필요한 이유:

@@ -1,7 +1,9 @@
 ---
 title: 서로소 집합 (Disjoint Sets)
 category: Data Structure
+layout: note
 ---
+
 서로소 집합이란 공통 원소가 없는, 즉 서로 겹치지 않는 집합들을 말한다. 예를 들어, {1, 2}, {3, 4} , {5}는 세 개의 서로소 집합이다. 
 
 Union-Find 자료구조
