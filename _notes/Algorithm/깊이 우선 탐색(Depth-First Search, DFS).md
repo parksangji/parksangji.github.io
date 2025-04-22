@@ -1,6 +1,7 @@
 ---
-title: "깊이 우선 탐색(Depth-First Search, DFS)"
-category: "Algorithm" # 필요하다면
+title: 깊이 우선 탐색(Depth-First Search, DFS)
+category: Algorithm
+layout: note
 ---
 
 
