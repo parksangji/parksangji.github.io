@@ -1,56 +1,40 @@
 name: Build and Deploy to GitHub Pages with File List
-
 on:
-  # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab
+    branches: [main]
   workflow_dispatch:
-
 permissions:
   contents: read
   pages: write
   id-token: write
-
 concurrency:
   group: "pages"
   cancel-in-progress: false
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18.x'
-
+          node-version: "18.x"
       - name: Install dependencies
         run: npm install glob
-
       - name: Create _data directory
         run: mkdir -p _data
-
       - name: Generate file list
         run: node generateFileList.js
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
+      - name: Set up Pages
+        uses: actions/configure-pages@v4  # v5에서 v4로 변경
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
-          # config: _config.yml 줄 제거
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-
   deploy:
     environment:
       name: github-pages
