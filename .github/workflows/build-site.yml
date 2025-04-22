@@ -46,7 +46,7 @@ jobs:
         with:
           source: ./
           destination: ./_site
-          config: _config.yml # _config.yml 파일 사용 명시
+          # config: _config.yml 줄 제거
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
