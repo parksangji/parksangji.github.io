@@ -3,6 +3,7 @@ title: PriorityQueue
 category: JAVA
 layout: note
 ---
+
 **특징:**
 
 - 우선순위 큐. 요소를 꺼낼 때 우선순위가 가장 높은(또는 낮은) 요소부터 꺼냅니다.

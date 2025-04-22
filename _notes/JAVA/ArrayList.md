@@ -2,7 +2,7 @@
 title: ArrayList
 category: JAVA
 layout: note
---- 
+---
 
 배열 기반의 리스트 구현체.
 - 내부적으로 배열을 사용하여 요소를 저장.

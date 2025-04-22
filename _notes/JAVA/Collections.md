@@ -3,6 +3,7 @@ title: Collections
 category: JAVA
 layout: note
 ---
+
 Collections Framework는 여러 개의 객체를 효율적으로 저장, 관리, 처리할 수 있는 다양한 자료구조 클래스와 인터페이스를 제공하는 라이브러리입니다. `List`, `Set`, `Map`, `Queue`, [[Stack]] 등의 인터페이스와 그 구현체들을 포함합니다.
 
 **주요 인터페이스:**

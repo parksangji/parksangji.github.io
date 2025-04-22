@@ -3,6 +3,7 @@ title: TCP 3-Way Handshake & 4-Way HandShake
 category: Network
 layout: note
 ---
+
 TCP는 인터넷 프로토콜 스택의 핵심 프로토콜 중 하나로, 신뢰성 있는 연결 지향형 프로토콜이다. 데이터를 순서대로, 오류 없이, 중복 없이 전송하는 것을 보장한다. TCP는 연결을 설정하고(3-way handshake), 데이터를 전송하고, 연결을 종료하는(4-way handshake) 과정을 거칩니다. 
 1. 3-Way Handshake (연결 설정): 
 	TCP 연결을 설정하는 과정으로, 클라이언트와 서버가 서로 통신할 준비가 되었는지 확인하는 절차이다. 

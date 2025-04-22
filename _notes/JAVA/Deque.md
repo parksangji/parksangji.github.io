@@ -3,6 +3,7 @@ title: Deque
 category: JAVA
 layout: note
 ---
+
 **특징:**
 
 - 양쪽 끝에서 삽입과 삭제가 모두 가능한 자료구조.

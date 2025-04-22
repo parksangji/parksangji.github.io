@@ -3,6 +3,7 @@ title: 스레드 풀(Thread pool)
 category: JAVA
 layout: note
 ---
+
 스레드 풀은 미리 일정 개수의 작업자 스레드(Worker Thread)를 생성해 놓고, 작업 요청이 들어올 때마다 풀에 있는 유휴 스레드를 할당하여 작업을 처리하는 방식이다. 작업이 완료되면 해당 스레드는 다시 풀로 반환되어 다음 작업을 기다린다. 
 
 ![[Pasted image 20250414160413.png]]

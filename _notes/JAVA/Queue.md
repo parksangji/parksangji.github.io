@@ -3,6 +3,7 @@ title: Queue
 category: JAVA
 layout: note
 ---
+
 **특징:**
 
 - FIFO (First-In, First-Out) 순서를 따르는 자료구조.
