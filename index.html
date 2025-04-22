@@ -7,18 +7,17 @@
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-  <h1>My Notes</h1>
+  <div class="container"> <h1>My Notes</h1>
 
-  {% assign notes_by_category = site.notes | group_by: 'category' %}
+    {% assign notes_by_category = site.notes | group_by: 'category' %}
 
-  {% for category_group in notes_by_category %}
-    <h2>{{ category_group.name }}</h2>
-    <ul>
-      {% for note in category_group.items %}
-        <li><a href="{{ note.url }}">{{ note.title }}</a></li>
-      {% endfor %}
-    </ul>
-  {% endfor %}
-
-</body>
+    {% for category_group in notes_by_category %}
+      <h2>{{ category_group.name }}</h2>
+      <ul>
+        {% for note in category_group.items %}
+          <li><a href="{{ note.url }}">{{ note.title }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </div> </body>
 </html>
