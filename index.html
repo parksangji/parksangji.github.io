@@ -9,10 +9,10 @@
 <body>
   <h1>My Notes</h1>
 
-  {% for category, files in site.data.notes.categories %}
-    <h2>{{ category }}</h2>
+  {% for item in site.data.notes.categories %}
+    <h2>{{ item[0] }}</h2>
     <ul>
-      {% for file in files %}
+      {% for file in item[1] %}
         <li><a href="/notes/{{ file.nameWithoutExt }}">{{ file.path }}</a></li>
       {% endfor %}
     </ul>
