@@ -1,3 +1,4 @@
+
 ---
 ---
 <!DOCTYPE html>
@@ -8,10 +9,15 @@
 </head>
 <body>
   <h1>My Notes</h1>
-  <ul>
-    {% for post in site._notes.docs %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+
+  {% for item in site.data.notes.categories %}
+    <h2>{{ item[0] }}</h2>
+    <ul>
+      {% for file in item[1] %}
+        <li><a href="/_notes/{{ file.nameWithoutExt }}.html">{{ file.path }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+
 </body>
 </html>
