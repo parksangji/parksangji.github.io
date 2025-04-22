@@ -1,57 +1,87 @@
 body {
-    font-family: 'Noto Sans KR', sans-serif; /* 카카오에서 사용하는 폰트와 유사한 스타일 */
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 16px;
     line-height: 1.6;
     margin: 0;
     padding: 20px;
-    color: #333; /* 텍스트 색상 */
-    background-color: #f8f9fa; /* 배경색상 */
+    color: #333;
+    background-color: #f8f9fa;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: #212529; /* 제목 색상 */
-    font-weight: bold;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-}
-
-h1 {
-    font-size: 2.5em;
-    border-bottom: 2px solid #e9ecef; /* 제목 아래 선 */
-    padding-bottom: 0.3em;
-}
-
-h2 {
-    font-size: 1.8em;
-}
-
-a {
-    color: #007bff; /* 링크 색상 */
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-a:hover {
-    color: #0056b3; /* 호버 시 링크 색상 */
-    text-decoration: underline;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    margin-bottom: 0.8em;
+body.loaded {
+    opacity: 1;
 }
 
 .container {
-    max-width: 1000px; /* 컨테이너 최대 너비 */
-    margin: 20px auto;
+    max-width: 1000px;
+    margin: 40px auto;
     padding: 30px;
-    background-color: #fff; /* 컨테이너 배경색 */
+    background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile {
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 30px;
+}
+
+.profile h1 {
+    font-size: 2.8em;
+    margin-bottom: 0.5em;
+}
+
+.profile .introduction {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 1em;
+}
+
+.profile .contact-info {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.profile .contact-info li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.profile .contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.profile .contact-info a:hover {
+    text-decoration: underline;
+}
+
+.skills {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eee;
+}
+
+.skills h2 {
+    font-size: 1.8em;
+    margin-top: 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.3em;
+    margin-bottom: 1em;
+}
+
+.skills p {
+    line-height: 1.6;
+    margin-bottom: 0.5em;
+}
+
+.category-group-container {
+    /* 카테고리 그룹들을 묶는 컨테이너 (필요에 따라 스타일링) */
 }
 
 .category-group {
@@ -59,34 +89,37 @@ li {
 }
 
 .category-group h2 {
-    border-bottom: 1px solid #ddd; /* 카테고리 제목 아래 선 */
+    font-size: 1.5em;
+    border-bottom: 1px solid #ddd;
     padding-bottom: 0.2em;
     margin-top: 1em;
 }
 
 .note-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 반응형 그리드 */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 1em;
 }
 
 .note-item {
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* 카드 그림자 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     padding: 15px;
-    transition: transform 0.2s;
+    transition: transform 0.2s, opacity 0.3s ease;
 }
 
 .note-item:hover {
-    transform: translateY(-3px); /* 호버 시 살짝 위로 이동 */
+    transform: translateY(-3px);
+}
+
+.note-item:active,
+.note-item a:active {
+    opacity: 0.6;
 }
 
 .note-item a {
     display: block;
     color: #333;
-}
-
-.note-item a:hover {
     text-decoration: none;
 }
