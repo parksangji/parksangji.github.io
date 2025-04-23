@@ -6,12 +6,6 @@ body {
     padding: 20px;
     color: #333;
     background-color: #f8f9fa;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-body.loaded {
-    opacity: 1;
 }
 
 .container {
@@ -25,20 +19,21 @@ body.loaded {
 
 .profile {
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
     border-bottom: 2px solid #eee;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .profile h1 {
     font-size: 2.8em;
-    margin-bottom: 0.5em;
+    margin-bottom: 10px;
 }
 
 .profile .introduction {
-    color: #666;
-    line-height: 1.8;
-    margin-bottom: 1em;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-size: 1.1em;
 }
 
 .profile .contact-info {
@@ -49,7 +44,7 @@ body.loaded {
 
 .profile .contact-info li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 .profile .contact-info a {
@@ -62,64 +57,65 @@ body.loaded {
 }
 
 .skills {
-    margin-bottom: 30px;
-    padding-bottom: 20px;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
     border-bottom: 2px solid #eee;
 }
 
 .skills h2 {
-    font-size: 1.8em;
+    font-size: 2em;
     margin-top: 0;
     border-bottom: 1px solid #ddd;
-    padding-bottom: 0.3em;
-    margin-bottom: 1em;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .skills p {
     line-height: 1.6;
-    margin-bottom: 0.5em;
-}
-
-.category-group-container {
-    /* 카테고리 그룹들을 묶는 컨테이너 (필요에 따라 스타일링) */
+    margin-bottom: 10px;
 }
 
 .category-group {
-    margin-bottom: 2em;
+    margin-bottom: 3em;
 }
 
 .category-group h2 {
-    font-size: 1.5em;
+    font-size: 1.8em;
     border-bottom: 1px solid #ddd;
-    padding-bottom: 0.2em;
-    margin-top: 1em;
+    padding-bottom: 0.5em;
+    margin-top: 0;
+    cursor: pointer;
 }
 
 .note-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 1em;
+    list-style: none;
+    padding-left: 20px;
 }
 
 .note-item {
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    padding: 15px;
-    transition: transform 0.2s, opacity 0.3s ease;
-}
-
-.note-item:hover {
-    transform: translateY(-3px);
-}
-
-.note-item:active,
-.note-item a:active {
-    opacity: 0.6;
+    margin-bottom: 1em;
 }
 
 .note-item a {
-    display: block;
     color: #333;
     text-decoration: none;
+    display: block;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.note-item a:hover {
+    color: #007bff;
+}
+
+.note-item .description {
+    color: #777;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.note-item img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
 }

@@ -3,61 +3,58 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comdolidol-tech</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comdolidol-tech</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body class="loading">
-<div class="container">
-  <header class="profile">
-    <h1>Comdolidol-tech</h1>
-    <p class="introduction">
-      끊임없이 배우고 성장하며, 효율적인 풀스택 개발을 추구하는 개발자입니다.
-      다양한 기술 스택을 활용하여 실질적인 문제 해결에 기여하고,
-      Gemini를 통해 얻은 인사이트를 바탕으로 더 나은 코드를 탐구합니다.
-    </p>
-    <ul class="contact-info">
-      <li>Email: <a href="mailto:parksangji1109@gmail.com">parksangji1109@gmail.com</a></li>
-      <li>GitHub: <a href="https://github.com/parksangji" target="_blank">github/parksangji</a></li>
-      <li>Company: sankun</li>
-      <li>University: Hanyang</li>
-    </ul>
-  </header>
+<body>
+    <div class="container">
+        <header class="profile">
+            <h1>Comdolidol-tech</h1>
+            <p class="introduction">
+                끊임없이 배우고 성장하며, 효율적인 풀스택 개발을 추구하는 개발자 박상지입니다.<br>
+                Java, JavaScript, Spring Boot, AWS 등 다양한 기술 스택을 활용하여<br>
+                실질적인 문제 해결을 탐구하고, 지속적인 성장을 통해 더 나은 개발을 지향합니다.
+            </p>
+            <ul class="contact-info">
+                <li>Email: <a href="mailto:parksangji1109@gmail.com">parksangji1109@gmail.com</a></li>
+                <li>GitHub: <a href="https://github.com/parksangji" target="_blank">github/parksangji</a></li>
+                <li>직장: sankun</li>
+                <li>학교: Hanyang</li>
+            </ul>
+        </header>
 
-  <div class="skills">
-    <h2>Skills</h2>
-    <p><strong>직업:</strong> 풀스택 개발자</p>
-    <p><strong>국적:</strong> 한국 (South Korea)</p>
-    <p><strong>언어:</strong> 한국어 (Korean)</p>
-    <p><strong>사용 언어:</strong> Java, JavaScript, jQuery</p>
-    <p><strong>프레임워크:</strong> Spring Boot, Spring Batch</p>
-    <p><strong>IDE:</strong> IntelliJ, DataGrip</p>
-    <p><strong>SQL:</strong> PostgreSQL</p>
-    <p><strong>DevOps:</strong> Redis, Kafka, Tomcat 10, GitHub, JDK 21, AWS</p>
-  </div>
+        <div class="skills">
+            <h2>Skills</h2>
+            <p><strong>직업:</strong> 풀스택 개발자</p>
+            <p><strong>주요 기술:</strong> Java, JavaScript, Spring Boot, Spring Batch, PostgreSQL</p>
+            <p><strong>DevOps:</strong> Redis, Kafka, Tomcat, AWS, GitHub</p>
+            <p><strong>사용 도구:</strong> IntelliJ, DataGrip, Elasticsearch, Kibana, Logstash, JDK 21</p>
+        </div>
 
-  <div class="category-group-container">
-    {% assign notes_by_category = site.notes | group_by: 'category' %}
-    {% for category_group in notes_by_category %}
-    <div class="category-group">
-      <h2>{{ category_group.name }}</h2>
-      <ul class="note-list">
-        {% for note in category_group.items %}
-        <li class="note-item">
-          <a href="{{ note.url }}" onclick="this.style.opacity = '0.6'; setTimeout(() => { window.location.href = this.href; }, 300);">{{ note.title }}</a>
-        </li>
-        {% endfor %}
-      </ul>
+        <div class="category-group-container">
+            {% assign notes_by_category = site.notes | group_by: 'category' %}
+            {% for category_group in notes_by_category %}
+                <div class="category-group">
+                    <h2>{{ category_group.name }}</h2>
+                    <ul class="note-list">
+                        {% for note in category_group.items %}
+                            <li class="note-item">
+                                <a href="{{ note.url }}">{{ note.title }}</a>
+                                {% if note.description %}
+                                    <p class="description">{{ note.description }}</p>
+                                {% endif %}
+                                {% if note.image %}
+                                    <img src="{{ note.image }}" alt="{{ note.title }}">
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endfor %}
+        </div>
     </div>
-    {% endfor %}
-  </div>
-</div>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    document.body.classList.add('loaded');
-  });
-</script>
 </body>
 </html>
