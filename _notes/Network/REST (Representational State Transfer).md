@@ -2,7 +2,7 @@
 title: REST (Representational State Transfer)
 category: Network
 description: 웹 서비스 API 설계를 위한 아키텍처 스타일과 제약 조건
-image: "/assets/images/\brest.png"
+image: /assets/images/rest.png
 ---
 
 # REST (Representational State Transfer)
@@ -97,5 +97,3 @@ REST 아키텍처 스타일을 따른다고 말하려면 다음 제약 조건들
 * **성능 및 확장성:** REST 원칙을 잘 따르면 자연스럽게 확장 가능하고 성능 좋은 시스템을 구축하는 데 도움이 됩니다.
 
 REST 원칙을 이해하고 이를 API 설계에 적용하는 것은 현대적인 백엔드 개발자에게 필수적인 역량입니다.
-
-다음 학습을 원하시면 "다음"을 입력해주세요.
