@@ -8,25 +8,8 @@
     <title>Comdolidol-tech</title>
     <link rel="stylesheet" href="/assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        .loading-spinner {
-            border: 4px solid rgba(0, 0, 0, 0.1);
-            border-left-color: #007bff;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            animation: spin 1s linear infinite;
-            display: none; /* 초기 숨김 */
-            margin-left: 5px;
-            vertical-align: middle;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-    </style>
 </head>
-<body class="loading">
+<body>
     <div class="container">
         <header class="profile">
             <h1>Comdolidol-tech</h1>
@@ -63,7 +46,7 @@
                     <ul class="note-list">
                         {% for note in category_group.items %}
                             <li class="note-item">
-                                <a href="{{ note.url }}" onclick="this.classList.add('loading-link');">{{ note.title }}<span class="loading-spinner"></span></a>
+                                <a href="{{ note.url }}">{{ note.title }}</a>
                             </li>
                         {% endfor %}
                     </ul>
@@ -71,21 +54,5 @@
             {% endfor %}
         </div>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.add('loaded');
-        });
-
-        const noteLinks = document.querySelectorAll('.note-item a');
-        noteLinks.forEach(link => {
-            link.addEventListener('click', function(event) {
-                event.preventDefault();
-                this.querySelector('.loading-spinner').style.display = 'inline-block';
-                setTimeout(() => {
-                    window.location.href = this.href;
-                }, 100); // 0.1초 지연 후 이동
-            });
-        });
-    </script>
 </body>
 </html>
