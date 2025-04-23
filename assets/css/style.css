@@ -6,12 +6,6 @@ body {
     padding: 20px;
     color: #333;
     background-color: #f8f9fa;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out; /* 로딩 속도 약간 빠르게 */
-}
-
-body.loaded {
-    opacity: 1;
 }
 
 .container {
@@ -55,13 +49,10 @@ body.loaded {
 .profile .contact-info a {
     color: #007bff;
     text-decoration: none;
-    transition: color 0.2s ease, transform 0.2s ease; /* 호버 시 움직임 추가 */
 }
 
 .profile .contact-info a:hover {
-    color: #0056b3;
     text-decoration: underline;
-    transform: scale(1.05); /* 호버 시 살짝 확대 */
 }
 
 .skills {
@@ -96,12 +87,6 @@ body.loaded {
     border-bottom: 1px solid #ddd;
     padding-bottom: 0.2em;
     margin-top: 1em;
-    cursor: pointer; /* 클릭 가능 표시 */
-    transition: color 0.2s ease;
-}
-
-.category-group h2:hover {
-    color: #007bff; /* 호버 시 색상 변경 */
 }
 
 .note-list {
@@ -115,20 +100,14 @@ body.loaded {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     padding: 15px;
-    transition: transform 0.2s, opacity 0.2s ease; /* 호버 및 클릭 시 효과 */
-}
-
-.note-item:hover {
-    transform: translateY(-3px);
-}
-
-.note-item:active,
-.note-item a:active {
-    opacity: 0.7;
 }
 
 .note-item a {
     display: block;
     color: #333;
     text-decoration: none;
+}
+
+.note-item a:hover {
+    text-decoration: underline;
 }
