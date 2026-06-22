@@ -55,7 +55,7 @@ B-tree 인덱스는 다음 연산자에서 사용됩니다.
 CREATE INDEX idx_users_email ON users (email);
 
 -- 조회
-SELECT * FROM users WHERE email = 'comdol@example.com';
+SELECT * FROM users WHERE email = 'kuo@example.com';
 ```
 
 ## 복합 인덱스와 "왼쪽 접두사" 규칙
@@ -83,7 +83,7 @@ SELECT * FROM orders WHERE status = 'PAID';
 
 ```sql
 EXPLAIN ANALYZE
-SELECT * FROM users WHERE email = 'comdol@example.com';
+SELECT * FROM users WHERE email = 'kuo@example.com';
 ```
 
 출력에서 `Index Scan using idx_users_email`이 보이면 잘 타고 있는 것이고, `Seq Scan`이 나오면 인덱스를 안(못) 쓰고 전체를 훑고 있다는 뜻입니다. 데이터가 적거나 조건이 테이블 대부분을 반환할 때는 옵티마이저가 일부러 `Seq Scan`을 택하기도 합니다.

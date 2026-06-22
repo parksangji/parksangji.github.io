@@ -62,8 +62,8 @@ class UserRepositoryTest {
 
     @Test
     void 이메일로_조회() {
-        userRepository.save(new User("comdol@example.com"));
-        assertThat(userRepository.findByEmail("comdol@example.com")).isPresent();
+        userRepository.save(new User("kuo@example.com"));
+        assertThat(userRepository.findByEmail("kuo@example.com")).isPresent();
     }
 }
 ```
