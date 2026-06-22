@@ -1,0 +1,72 @@
+<div id="ai-search" data-index="{{ '/assets/js/data/search-index.json' | relative_url }}">
+  <p class="ai-intro">
+    키워드가 정확히 일치하지 않아도 <strong>의미로</strong> 글을 찾아줍니다.
+    모든 처리는 브라우저 안에서 일어나며 — 서버·API 키·외부 전송이 없습니다.
+    (검색 모델은 처음 한 번만 받고 이후 캐시됩니다.)
+  </p>
+
+  <form id="ai-search-form" autocomplete="off">
+    <input id="ai-search-input" type="search" placeholder="예) 캐시 적용했다가 생긴 동시성 문제"
+           aria-label="AI 시맨틱 검색" />
+    <button type="submit">검색</button>
+  </form>
+
+  <div class="ai-chips">
+    <button type="button" class="ai-chip">레디스 캐시 함정</button>
+    <button type="button" class="ai-chip">엘라스틱서치 한글 형태소 분석</button>
+    <button type="button" class="ai-chip">트랜잭션 전파와 격리 수준</button>
+    <button type="button" class="ai-chip">JPA N+1 성능 문제</button>
+  </div>
+
+  <div id="ai-search-progress" hidden><div id="ai-search-bar"></div></div>
+  <p id="ai-search-status" role="status" aria-live="polite"></p>
+  <ul id="ai-search-results"></ul>
+</div>
+
+<style>
+  #ai-search { max-width: 100%; }
+  .ai-intro { color: var(--text-muted-color); font-size: .9rem; line-height: 1.6; }
+  #ai-search-form { display: flex; gap: .5rem; margin: 1rem 0 .75rem; }
+  #ai-search-input {
+    flex: 1; padding: .6rem .8rem; font-size: 1rem; border-radius: .5rem;
+    border: 1px solid var(--input-focus-border-color, var(--card-border-color, #d0d0d0));
+    background: var(--card-bg, #fff); color: var(--text-color, inherit);
+  }
+  #ai-search-form button {
+    padding: 0 1.1rem; border: 0; border-radius: .5rem; cursor: pointer;
+    background: var(--link-color, #2a408e); color: #fff; font-weight: 600;
+  }
+  .ai-chips { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1rem; }
+  .ai-chip {
+    padding: .3rem .7rem; font-size: .8rem; cursor: pointer; border-radius: 1rem;
+    border: 1px solid var(--card-border-color, #e0e0e0);
+    background: var(--card-bg, transparent); color: var(--text-muted-color, inherit);
+  }
+  .ai-chip:hover { color: var(--link-color, #2a408e); border-color: var(--link-color, #2a408e); }
+  #ai-search-progress {
+    height: 6px; border-radius: 3px; overflow: hidden; margin: .5rem 0;
+    background: var(--card-border-color, #eee);
+  }
+  #ai-search-bar { height: 100%; width: 0; background: var(--link-color, #2a408e); transition: width .2s; }
+  #ai-search-status { color: var(--text-muted-color); font-size: .85rem; min-height: 1.2em; }
+  #ai-search-results { list-style: none; margin: .5rem 0 0; padding: 0; }
+  .ai-result { margin: 0 0 .6rem; }
+  .ai-result a {
+    display: block; padding: .8rem 1rem; border-radius: .6rem; text-decoration: none;
+    border: 1px solid var(--card-border-color, #eaeaea); background: var(--card-bg, transparent);
+    transition: border-color .15s, transform .15s;
+  }
+  .ai-result a:hover { border-color: var(--link-color, #2a408e); transform: translateY(-1px); }
+  .ai-result-head { display: flex; justify-content: space-between; align-items: baseline; gap: .5rem; }
+  .ai-result-title { font-weight: 700; color: var(--text-color, inherit); }
+  .ai-result-score {
+    flex: none; font-size: .75rem; font-weight: 600; color: var(--link-color, #2a408e);
+    background: color-mix(in srgb, var(--link-color, #2a408e) 12%, transparent);
+    padding: .1rem .45rem; border-radius: 1rem;
+  }
+  .ai-result-meta { font-size: .78rem; color: var(--text-muted-color); margin-top: .15rem; }
+  .ai-result-snippet { font-size: .85rem; color: var(--text-muted-color); margin: .4rem 0 0; line-height: 1.5; }
+  .ai-empty { color: var(--text-muted-color); }
+</style>
+
+<script type="module" src="{{ '/assets/js/ai-search.js' | relative_url }}"></script>

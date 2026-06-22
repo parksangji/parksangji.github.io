@@ -15,6 +15,9 @@ _site
 node_modules
 package-lock.json
 
+# AI 검색: 다운로드된 임베딩 모델 캐시 (생성물 search-index.json 은 커밋)
+tools/ai/.model-cache
+
 # IDE configurations
 .idea
 .vscode/*

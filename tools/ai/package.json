@@ -1,0 +1,15 @@
+{
+  "name": "blog-ai-search",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "빌드타임 임베딩 인덱스 생성 + 로컬 검색 품질 테스트 (키 없음, 로컬 모델)",
+  "scripts": {
+    "build-index": "node build-index.mjs",
+    "query": "node query-test.mjs"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^3.0.0",
+    "gray-matter": "^4.0.3"
+  }
+}

@@ -1,7 +1,7 @@
 ---
 # the default layout is 'page'
 icon: fas fa-info-circle
-order: 4
+order: 5
 ---
 
 ## 안녕하세요, 쿠오(Kuo)입니다 🦫

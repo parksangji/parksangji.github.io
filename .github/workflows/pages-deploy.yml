@@ -45,6 +45,25 @@ jobs:
           ruby-version: 3.4
           bundler-cache: true
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # 임베딩 모델(약 50MB) 캐시 → 매 배포마다 재다운로드 방지
+      - name: Cache embedding model
+        uses: actions/cache@v4
+        with:
+          path: tools/ai/.model-cache
+          key: hf-multilingual-e5-small-q8-v1
+
+      # AI 시맨틱 검색 인덱스 생성 (로컬 모델, 외부 API·키 없음). jekyll 빌드 전에 실행해 항상 최신 유지.
+      - name: Build AI search index
+        run: |
+          cd tools/ai
+          npm install --no-audit --no-fund
+          node build-index.mjs
+
       - name: Build site
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
         env:
