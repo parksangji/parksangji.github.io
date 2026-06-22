@@ -14,7 +14,11 @@ panel_includes: [activity-panel]
 </section>
 
 <!-- ===== 오늘의 공부: 날짜 시드로 매일 자동 로테이션되는 복습 4선 ===== -->
-{% assign study_pool = site.posts | where_exp: 'item', 'item.hidden != true' %}
+{% assign study_src = site.posts | where_exp: 'item', 'item.hidden != true' %}
+{% assign study_pool = '' | split: '' %}
+{% for item in study_src %}
+  {% unless item.categories contains 'Project' %}{% assign study_pool = study_pool | push: item %}{% endunless %}
+{% endfor %}
 
 <script type="application/json" id="today-study-data">
 [
@@ -43,47 +47,32 @@ panel_includes: [activity-panel]
 
 <h2 class="ts-all-head">전체 글</h2>
 
-{% assign all_pinned = site.posts | where: 'pin', 'true' %}
-{% assign all_normal = site.posts | where_exp: 'item', 'item.pin != true and item.hidden != true' %}
+<!-- 홈 목록: Project 카테고리 제외 + 고정글 먼저, 페이지당 paginate(9)개 수동 슬라이싱 -->
+<!-- (jekyll-paginate v1은 전역 페이징이라 카테고리 필터가 안 되어 직접 구성) -->
+{% assign feed = '' | split: '' %}
+
+{% assign src_pinned = site.posts | where: 'pin', 'true' %}
+{% for item in src_pinned %}
+  {% unless item.hidden == true or item.categories contains 'Project' %}
+    {% assign feed = feed | push: item %}
+  {% endunless %}
+{% endfor %}
+
+{% assign src_normal = site.posts | where_exp: 'item', 'item.pin != true and item.hidden != true' %}
+{% for item in src_normal %}
+  {% unless item.categories contains 'Project' %}
+    {% assign feed = feed | push: item %}
+  {% endunless %}
+{% endfor %}
+
+{% assign per = paginator.per_page | default: 9 %}
+{% assign win_start = paginator.page | minus: 1 | times: per %}
+{% assign win_end = win_start | plus: per | minus: 1 %}
 
 {% assign posts = '' | split: '' %}
-
-<!-- Get pinned posts on current page -->
-
-{% assign visible_start = paginator.page | minus: 1 | times: paginator.per_page %}
-{% assign visible_end = visible_start | plus: paginator.per_page %}
-
-{% if all_pinned.size > visible_start %}
-  {% if all_pinned.size > visible_end %}
-    {% assign pinned_size = paginator.per_page %}
-  {% else %}
-    {% assign pinned_size = all_pinned.size | minus: visible_start %}
-  {% endif %}
-
-  {% for i in (visible_start..all_pinned.size) limit: pinned_size %}
-    {% assign posts = posts | push: all_pinned[i] %}
-  {% endfor %}
-{% else %}
-  {% assign pinned_size = 0 %}
-{% endif %}
-
-<!-- Get normal posts on current page -->
-
-{% assign normal_size = paginator.posts | size | minus: pinned_size %}
-
-{% if normal_size > 0 %}
-  {% if pinned_size > 0 %}
-    {% assign normal_start = 0 %}
-  {% else %}
-    {% assign normal_start = visible_start | minus: all_pinned.size %}
-  {% endif %}
-
-  {% assign normal_end = normal_start | plus: normal_size | minus: 1 %}
-
-  {% for i in (normal_start..normal_end) %}
-    {% assign posts = posts | push: all_normal[i] %}
-  {% endfor %}
-{% endif %}
+{% for i in (win_start..win_end) %}
+  {% if feed[i] %}{% assign posts = posts | push: feed[i] %}{% endif %}
+{% endfor %}
 
 <div id="post-list" class="post-grid flex-grow-1 px-xl-1">
   {% for post in posts %}

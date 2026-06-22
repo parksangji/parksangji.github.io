@@ -80,7 +80,7 @@ flowchart TD
     C --> D{"메서드 종류 판별"}
     D -->|기본 CRUD| E["SimpleJpaRepository<br/>(공통 구현체)에 위임"]
     D -->|파생 쿼리| F["PartTree 파서로<br/>JPQL 생성"]
-    D -->|@Query| G["선언된 JPQL/네이티브 실행"]
+    D -->|"@Query"| G["선언된 JPQL/네이티브 실행"]
 ```
 
 즉 `UserRepository` 타입으로 주입받는 건 사실 **JDK 동적 프록시**이고, `findById` 같은 공통 메서드는 모두 `SimpleJpaRepository` 한 클래스가 처리합니다. "인터페이스가 어떻게 스스로 동작하지?"의 답은 **"동작하는 건 인터페이스가 아니라 프록시"** 입니다. ([@Transactional도 같은 프록시 메커니즘]({% post_url 2025-10-09-springboot-transactional-pitfalls %})을 쓴다는 걸 기억하면, Repository 호출에 트랜잭션이 왜 자연스럽게 엮이는지도 보입니다.)

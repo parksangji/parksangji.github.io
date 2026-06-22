@@ -92,7 +92,7 @@ flowchart LR
     A["spring-boot-starter-web"] --> B["spring-boot-web<br/>(+ autoconfig)"]
     A --> C["spring-boot-jackson"]
     A --> D["spring-boot-tomcat"]
-    B -.AutoConfiguration.imports.-> E["조건부 Bean 등록"]
+    B -.->|"AutoConfiguration.imports"| E["조건부 Bean 등록"]
 ```
 
 **왜 쪼갰나?** ① 의존성 경계가 명확해져 "쓰지도 않는 자동 구성"이 클래스패스에 덜 끌려옵니다. ② 각 기능 모듈이 자기 `AutoConfiguration.imports`를 들고 다녀, 자동 구성 후보 스캔이 모듈 단위로 국소화됩니다.
