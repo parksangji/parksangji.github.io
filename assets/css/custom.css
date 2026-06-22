@@ -310,6 +310,33 @@
   height: auto;
   display: block;
 }
+
+/* --- 6. 고정(sticky) 영역 --- */
+/* 데스크톱: 오른쪽 패널 전체를 화면에 고정 (활동 잔디 추가로 풀린 sticky 복구) */
+@media (min-width: 1200px) {
+  #panel-wrapper {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2rem;
+    align-self: flex-start;
+    max-height: calc(100vh - 3rem);
+    overflow-y: auto;
+  }
+  /* 패널 내부 .access의 조건부 마진/스티키와 충돌 방지 */
+  #panel-wrapper .access {
+    margin-top: 0;
+  }
+}
+
+/* 모바일/태블릿: 상단바 항상 고정(스크롤해도 숨지 않게) */
+@media (max-width: 991px) {
+  #topbar-wrapper {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+  }
+}
 /* 오른쪽 패널용 작은 잔디 */
 .heatmap-sm .heatmap-cell {
   width: 9px;
