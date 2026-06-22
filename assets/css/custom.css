@@ -144,86 +144,12 @@
   font-variant-numeric: tabular-nums;
 }
 
-/* ====== 포켓몬 느낌 카테고리 (몬스터볼 + 픽셀폰트 + 로고색 배지) ====== */
-
-/* 몬스터볼 아이콘 (CSS로 그림) */
-.pokeball {
-  display: inline-block;
-  flex: 0 0 auto;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  border: 1.5px solid #161616;
-  background:
-    radial-gradient(circle at center, #fff 0 2.4px, #161616 2.4px 3.5px, transparent 3.5px),
-    linear-gradient(to bottom, #ee1515 0 43%, #161616 43% 57%, #f6f6f6 57% 100%);
-  box-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.35);
-}
-/* 슈퍼볼(파랑) — 하위 카테고리 */
-.pokeball.great {
-  width: 13px;
-  height: 13px;
-  background:
-    radial-gradient(circle at center, #fff 0 2px, #161616 2px 3px, transparent 3px),
-    linear-gradient(to bottom, #2b6cd6 0 43%, #161616 43% 57%, #f6f6f6 57% 100%);
-}
-/* 마스터볼(보라) — 전체 */
-.pokeball.master {
-  width: 13px;
-  height: 13px;
-  background:
-    radial-gradient(circle at center, #fff 0 2px, #161616 2px 3px, transparent 3px),
-    linear-gradient(to bottom, #6a2fb5 0 43%, #161616 43% 57%, #f6f6f6 57% 100%);
-}
-
-/* 호버 시 살짝 흔들흔들 */
-@media (hover: hover) and (prefers-reduced-motion: no-preference) {
-  #sidebar .cat-tree a:hover .pokeball,
-  #sidebar .cat-tree summary:hover .pokeball {
-    animation: pokeball-shake 0.5s ease;
-  }
-}
-@keyframes pokeball-shake {
-  0%, 100% { transform: rotate(0); }
-  25% { transform: rotate(-18deg); }
-  75% { transform: rotate(18deg); }
-}
-
-/* 포켓몬 로고 느낌 헤딩 (픽셀 폰트 + 노랑) */
-#sidebar .cats-heading {
-  font-family: 'Press Start 2P', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0;
-  color: #ffcb05;
-  text-shadow: 1px 1px 0 #2a3b8f;
-  opacity: 1;
-}
-
-/* 개수 = 포켓몬 로고색(노랑 바탕/파랑 글씨) 픽셀 배지 */
-#sidebar .cat-count {
-  font-family: 'Press Start 2P', monospace;
-  font-size: 0.5rem;
-  background: #ffcb05;
-  color: #2a3b8f;
-  border: 1px solid #2a3b8f;
-  border-radius: 5px;
-  padding: 3px 5px;
-  line-height: 1;
-  box-shadow: 1.5px 1.5px 0 #2a3b8f;
-}
-
-/* 현재 보고 있는 카테고리 강조 (포켓몬 노랑) */
+/* 현재 보고 있는 카테고리/홈 강조 */
 #sidebar .cat-tree a.active-cat {
-  color: #2a3b8f;
-  background: #ffcb05;
-  font-weight: 700;
+  color: var(--link-color, #1f8fff);
+  background: rgba(31, 143, 255, 0.13);
+  font-weight: 600;
   border-radius: 0.4rem;
-}
-#sidebar .cat-tree a.active-cat .cat-count {
-  background: #2a3b8f;
-  color: #ffcb05;
-  border-color: #ffcb05;
-  box-shadow: 1.5px 1.5px 0 #ffcb05;
 }
 
 /* --- 4b. 프로필에 녹인 정보(About) --- */
@@ -231,7 +157,7 @@
   width: 100%;
   margin-top: 0.6rem;
   padding: 0 1rem;
-  text-align: center;
+  text-align: inherit; /* 제목/태그라인과 같은 정렬을 따름 */
 }
 #sidebar .profile-bio .bio-text {
   font-size: 0.78rem;
