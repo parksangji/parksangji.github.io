@@ -21,6 +21,9 @@
 {% comment %} 커스텀 인터랙션 스크립트 {% endcomment %}
 <script defer src="{{ '/assets/js/custom.js' | relative_url }}"></script>
 
+{% comment %} 네이버 서치어드바이저 사이트 소유확인 {% endcomment %}
+<meta name="naver-site-verification" content="ec2d1ca4eae4f5ebf40a4b2783a2b1086d13e28f" />
+
 {% comment %} Google AdSense (Auto ads). Activates only when a publisher id is set in _config.yml {% endcomment %}
 {% if site.google_adsense.id and site.google_adsense.id != empty %}
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.google_adsense.id }}"
