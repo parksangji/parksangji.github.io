@@ -1,0 +1,30 @@
+---
+layout: page
+title: "404 — 페이지를 찾을 수 없어요"
+permalink: /404.html
+---
+
+<div class="not-found-box text-center">
+  <p class="nf-code">4<span>0</span>4</p>
+  <p class="nf-msg">앗, 찾으시는 페이지가 없네요. 주소가 바뀌었거나 삭제되었을 수 있어요.</p>
+
+  <div class="nf-actions">
+    <a class="btn btn-primary" href="{{ '/' | relative_url }}">
+      <i class="fas fa-house fa-fw"></i> 홈으로
+    </a>
+    <a class="btn btn-outline-primary" href="{{ '/archives/' | relative_url }}">
+      <i class="fas fa-box-archive fa-fw"></i> 전체 글 보기
+    </a>
+  </div>
+
+  <p class="nf-hint">상단의 <i class="fas fa-magnifying-glass"></i> 검색으로 원하는 글을 찾아보세요.</p>
+</div>
+
+<style>
+  .not-found-box { padding: 2rem 0 3rem; }
+  .not-found-box .nf-code { font-family: "JetBrains Mono", monospace; font-size: 6rem; font-weight: 800; line-height: 1; margin-bottom: 1rem; color: var(--link-color, #1f8fff); }
+  .not-found-box .nf-code span { opacity: 0.45; }
+  .not-found-box .nf-msg { font-size: 1.1rem; opacity: 0.85; margin-bottom: 1.75rem; }
+  .not-found-box .nf-actions { display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem; }
+  .not-found-box .nf-hint { font-size: 0.9rem; opacity: 0.6; }
+</style>

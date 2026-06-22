@@ -331,6 +331,34 @@ td.rouge-code {
   display: block;
 }
 
+/* --- 5b. 관련 글 / 이전·다음 글 다듬기 --- */
+#related-posts .card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  #related-posts .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.13);
+  }
+}
+#related-posts .card-body .card-title {
+  font-size: 1rem;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.post-navigation .btn {
+  border-radius: 0.5rem;
+  transition: transform 0.15s ease;
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .post-navigation .btn:not(.disabled):hover {
+    transform: translateY(-2px);
+  }
+}
+
 /* --- 6. 고정(sticky) 영역 --- */
 /* 데스크톱: 오른쪽 패널 전체를 화면에 고정 (활동 잔디 추가로 풀린 sticky 복구) */
 @media (min-width: 1200px) {
