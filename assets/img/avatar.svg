@@ -5,8 +5,18 @@
       <stop offset="100%" stop-color="#11171d"/>
     </linearGradient>
   </defs>
+
+  <!-- 배경 + 액센트 링 -->
   <circle cx="120" cy="120" r="116" fill="url(#bg)" stroke="#33424f" stroke-width="4"/>
-  <text x="120" y="126" text-anchor="middle" dominant-baseline="central"
-        font-family="'JetBrains Mono','Consolas',monospace" font-size="82" font-weight="700"
-        fill="#5b9bd5">&lt;/&gt;</text>
+  <circle cx="120" cy="120" r="104" fill="none" stroke="#5b9bd5" stroke-width="2" opacity="0.35"/>
+
+  <!-- 코드 브래킷 (액센트) -->
+  <text x="120" y="92" text-anchor="middle" dominant-baseline="central"
+        font-family="'JetBrains Mono','Consolas',monospace" font-size="30" font-weight="700"
+        letter-spacing="2" fill="#5b9bd5">&lt;/&gt;</text>
+
+  <!-- 이니셜 PSJ -->
+  <text x="120" y="146" text-anchor="middle" dominant-baseline="central"
+        font-family="'JetBrains Mono','Consolas',monospace" font-size="66" font-weight="800"
+        letter-spacing="2" fill="#f2f3f4">PSJ</text>
 </svg>
