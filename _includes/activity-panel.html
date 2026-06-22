@@ -1,0 +1,22 @@
+{% include lang.html %}
+
+<!-- 오른쪽 패널: 활동 잔디 (블로그 글 + 실제 GitHub 기여) -->
+<div id="access-activity" class="mt-4">
+  <h2 class="panel-heading">활동 잔디</h2>
+  <div class="mt-3">
+    <div class="grass-label">📝 블로그 글 (최근 1년)</div>
+    <div id="blog-heatmap" class="heatmap heatmap-sm"></div>
+
+    <div class="grass-label mt-3">🐙 GitHub (@parksangji)</div>
+    <a id="gh-grass-link" href="https://github.com/parksangji"
+       target="_blank" rel="noopener noreferrer" aria-label="GitHub 프로필"></a>
+
+    <a class="small d-inline-block mt-2" href="{{ '/archives/' | relative_url }}">아카이브 전체 보기 →</a>
+  </div>
+</div>
+
+<script>
+  window.BLOG_POST_DATES = [
+    {% for post in site.posts %}"{{ post.date | date: '%Y-%m-%d' }}"{% unless forloop.last %},{% endunless %}{% endfor %}
+  ];
+</script>

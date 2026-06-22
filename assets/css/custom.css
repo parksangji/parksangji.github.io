@@ -234,3 +234,11 @@
   height: auto;
   display: block;
 }
+/* 오른쪽 패널용 작은 잔디 */
+.heatmap-sm .heatmap-cell {
+  width: 9px;
+  height: 9px;
+}
+#access-activity .panel-heading {
+  font-size: 1.1rem;
+}

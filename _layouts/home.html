@@ -1,13 +1,9 @@
 ---
 layout: default
+panel_includes: [activity-panel]
 ---
 
 {% include lang.html %}
-
-{% comment %} 홈 첫 페이지 상단에 태그/아카이브 하이라이트 표시 (커스텀) {% endcomment %}
-{% if paginator.page == 1 or paginator.page == nil %}
-  {% include home-highlights.html lang=lang %}
-{% endif %}
 
 {% assign all_pinned = site.posts | where: 'pin', 'true' %}
 {% assign all_normal = site.posts | where_exp: 'item', 'item.pin != true and item.hidden != true' %}
