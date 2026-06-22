@@ -197,7 +197,40 @@
   padding: 0.08rem 0;
 }
 
-/* --- 5. 홈 하이라이트 카드 살짝 다듬기 --- */
-#home-highlights .post-tag {
-  margin: 0;
+/* --- 5. 활동 잔디 (블로그 + GitHub) --- */
+.grass-label {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-bottom: 0.45rem;
+}
+.heatmap {
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+.heatmap-grid {
+  display: flex;
+  gap: 3px;
+  width: max-content;
+}
+.heatmap-col {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.heatmap-cell {
+  width: 11px;
+  height: 11px;
+  border-radius: 2px;
+  background: rgba(128, 128, 128, 0.15);
+}
+.heatmap-cell.lv1 { background: #9be9a8; }
+.heatmap-cell.lv2 { background: #40c463; }
+.heatmap-cell.lv3 { background: #30a14e; }
+.heatmap-cell.lv4 { background: #216e39; }
+
+.gh-grass {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }

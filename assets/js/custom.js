@@ -59,6 +59,49 @@
     });
   })();
 
+  // 1.7) 블로그 글 잔디 (컨트리뷰션 그래프) 렌더링
+  (function () {
+    var el = document.getElementById('blog-heatmap');
+    if (!el || !window.BLOG_POST_DATES) return;
+
+    var counts = {};
+    window.BLOG_POST_DATES.forEach(function (d) {
+      counts[d] = (counts[d] || 0) + 1;
+    });
+
+    var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+    var fmt = function (dt) {
+      return dt.getFullYear() + '-' + pad(dt.getMonth() + 1) + '-' + pad(dt.getDate());
+    };
+    var level = function (c) { return c === 0 ? 0 : c === 1 ? 1 : c === 2 ? 2 : c === 3 ? 3 : 4; };
+
+    var end = new Date();
+    end.setHours(0, 0, 0, 0);
+    var start = new Date(end);
+    start.setDate(start.getDate() - 7 * 52);
+    start.setDate(start.getDate() - start.getDay()); // 직전 일요일로
+
+    var grid = document.createElement('div');
+    grid.className = 'heatmap-grid';
+    var cur = new Date(start);
+    while (cur <= end) {
+      var col = document.createElement('div');
+      col.className = 'heatmap-col';
+      for (var i = 0; i < 7; i++) {
+        var key = fmt(cur);
+        var c = counts[key] || 0;
+        var cell = document.createElement('span');
+        cell.className = 'heatmap-cell lv' + level(c);
+        cell.title = key + ' · 글 ' + c + '개';
+        col.appendChild(cell);
+        cur.setDate(cur.getDate() + 1);
+      }
+      grid.appendChild(col);
+    }
+    el.innerHTML = '';
+    el.appendChild(grid);
+  })();
+
   // 2) 스크롤 등장 애니메이션
   var reveals = document.querySelectorAll('.reveal');
   if (reveals.length) {
