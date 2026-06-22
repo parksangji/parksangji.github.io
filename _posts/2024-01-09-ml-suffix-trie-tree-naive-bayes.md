@@ -1,12 +1,14 @@
 ---
 title: "접미사 트라이(Suffix Trie), 접미사 트리(Suffix Tree), 나이브 베이즈(Naive Bayes)"
 date: 2024-01-09 10:00:00 +0900
+series: "머신러닝 기초"
 categories: [Machine Learning, 기초]
 tags: [suffix-trie, suffix-tree, naive-bayes, algorithm]
 mermaid: true
 math: true
 image:
-  path: /assets/img/posts/ml-suffix-trie-tree-naive-bayes.svg
+  path: /assets/img/posts/ml-suffix-trie-tree-naive-bayes.png
+  lqip: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAARACADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDnDEzZIHFIYHHajzXUkA8U15XYcmtGA0jBxSlCBmm55pxkJXFGgA/3jTTRRSYhKKKKQH//2Q=="
   alt: 접미사 트라이/트리와 나이브 베이즈
 ---
 

@@ -331,6 +331,39 @@ td.rouge-code {
   display: block;
 }
 
+/* --- 5a. 시리즈(연재) 박스 --- */
+#series-box .series-title {
+  font-size: 1.05rem;
+  margin-bottom: 0.75rem;
+}
+#series-box .series-list {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+#series-box .series-list li {
+  margin: 0.25rem 0;
+  line-height: 1.5;
+}
+#series-box .series-list li.current {
+  list-style: none;
+  margin-left: -1.25rem;
+  padding: 0.3rem 0.6rem;
+  background: rgba(31, 143, 255, 0.12);
+  border-radius: 0.4rem;
+}
+#series-box .series-current {
+  font-weight: 700;
+}
+#series-box .series-now {
+  font-size: 0.72rem;
+  background: var(--link-color, #1f8fff);
+  color: #fff;
+  border-radius: 0.6rem;
+  padding: 0.05rem 0.5rem;
+  margin-left: 0.4rem;
+  vertical-align: middle;
+}
+
 /* --- 5b. 관련 글 / 이전·다음 글 다듬기 --- */
 #related-posts .card {
   transition: transform 0.2s ease, box-shadow 0.2s ease;

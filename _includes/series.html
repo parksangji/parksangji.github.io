@@ -1,0 +1,29 @@
+{% include lang.html %}
+
+{% comment %} 시리즈(연재) 박스: 같은 series 값을 가진 글들을 묶어 표시 {% endcomment %}
+{% if page.series %}
+  {% assign series_posts = site.posts | where: "series", page.series | sort: "date" %}
+  {% if series_posts.size > 1 %}
+    <div id="series-box" class="card mb-4">
+      <div class="card-body">
+        <h3 class="series-title">
+          <i class="fa-solid fa-layer-group fa-fw"></i>
+          시리즈 · {{ page.series }}
+          <span class="text-muted fw-normal">({{ series_posts.size }}편)</span>
+        </h3>
+        <ol class="series-list">
+          {% for p in series_posts %}
+            <li class="{% if p.url == page.url %}current{% endif %}">
+              {% if p.url == page.url %}
+                <span class="series-current">{{ p.title }}</span>
+                <span class="series-now">지금 보는 글</span>
+              {% else %}
+                <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ol>
+      </div>
+    </div>
+  {% endif %}
+{% endif %}

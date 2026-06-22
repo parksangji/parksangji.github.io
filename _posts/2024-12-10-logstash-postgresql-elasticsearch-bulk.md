@@ -1,11 +1,13 @@
 ---
 title: "Logstash를 활용한 PostgreSQL 데이터 Elasticsearch Bulk Insert"
 date: 2024-12-10 11:20:00 +0900
+series: "Logstash"
 categories: [Search, Logstash]
 tags: [logstash, postgresql, elasticsearch, jdbc, etl]
 mermaid: true
 image:
-  path: /assets/img/posts/logstash-postgresql-elasticsearch-bulk.svg
+  path: /assets/img/posts/logstash-postgresql-elasticsearch-bulk.png
+  lqip: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAARACADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDnvKZySBUTKQcYqTznQkKeKaZnzk4qjNbCRoZJVTpuOK2brw60Fk1x5wIUZxWMkxWZZDztOa1rjXFltXhVGG4dzSd7ldDIf7xphoopiWwlFFFAz//Z"
   alt: "Logstash로 PostgreSQL 데이터 Elasticsearch 적재"
 ---
 
