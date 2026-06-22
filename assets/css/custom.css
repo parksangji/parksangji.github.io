@@ -276,6 +276,16 @@ td.rouge-code {
   padding: 0;
   text-align: center; /* 제목/태그라인과 동일하게 가운데 */
 }
+/* 한글 단어 중간 줄바꿈 방지 + 태그라인 고정높이로 인한 잘림 방지 */
+#sidebar .site-subtitle {
+  word-break: keep-all;
+  height: auto;
+  min-height: 2rem;
+  line-height: 1.4;
+}
+#sidebar .profile-bio .bio-text {
+  word-break: keep-all;
+}
 #sidebar .profile-bio .bio-text {
   font-size: 0.78rem;
   line-height: 1.5;

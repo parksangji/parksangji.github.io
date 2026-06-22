@@ -16,7 +16,7 @@ timezone: Asia/Seoul
 
 title: 쿠오 # the main title
 
-tagline: Kuo의 삶을 담은 블로그 · 일상 · 여행 · 개발 # it will display as the subtitle
+tagline: Kuo의 삶을 담은 블로그 # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   Kuo(쿠오)의 일상 · 여행 · 개발, 그리고 직접 만든 앱/웹 이야기
