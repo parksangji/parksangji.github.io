@@ -64,7 +64,7 @@
 
     {% if tops.size > 0 %}
       <div class="sidebar-cats">
-        <p class="cats-heading"><i class="fa-fw fas fa-folder-open"></i><span>CATEGORIES</span></p>
+        <p class="cats-heading"><span class="pokeball" aria-hidden="true"></span><span>POKéDEX</span></p>
         <ul class="cat-tree">
           {% for top in tops %}
             {% assign top_count = site.categories[top] | size %}
@@ -78,18 +78,18 @@
               {% if subs.size > 0 %}
                 <details data-cat="{{ top }}">
                   <summary>
-                    <i class="fa-fw far fa-folder"></i><span>{{ top }}</span>
+                    <span class="pokeball" aria-hidden="true"></span><span>{{ top }}</span>
                     <span class="cat-count">{{ top_count }}</span>
                   </summary>
                   <ul>
                     <li>
-                      <a href="{{ top_url | relative_url }}"><i class="fa-fw fas fa-asterisk"></i><span>전체</span></a>
+                      <a href="{{ top_url | relative_url }}"><span class="pokeball master" aria-hidden="true"></span><span>전체</span></a>
                     </li>
                     {% for s in subs %}
                       {% assign s_url = s | slugify | url_encode | prepend: '/categories/' | append: '/' %}
                       <li>
                         <a href="{{ s_url | relative_url }}">
-                          <i class="fa-fw far fa-file-lines"></i><span>{{ s }}</span>
+                          <span class="pokeball great" aria-hidden="true"></span><span>{{ s }}</span>
                           <span class="cat-count">{{ site.categories[s] | size }}</span>
                         </a>
                       </li>
@@ -98,7 +98,7 @@
                 </details>
               {% else %}
                 <a href="{{ top_url | relative_url }}">
-                  <i class="fa-fw far fa-folder"></i><span>{{ top }}</span>
+                  <span class="pokeball" aria-hidden="true"></span><span>{{ top }}</span>
                   <span class="cat-count">{{ top_count }}</span>
                 </a>
               {% endif %}
