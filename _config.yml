@@ -78,7 +78,7 @@ pageviews:
 # Google AdSense. Fill in the publisher ID to enable Auto ads.
 # After filling the id, enable "Auto ads" in your AdSense dashboard.
 google_adsense:
-  id: "" # TODO: 'ca-pub-XXXXXXXXXXXXXXXX' (AdSense 승인 후 발급)
+  id: "ca-pub-2295950740572558"
 
 # Prefer color scheme setting.
 #
