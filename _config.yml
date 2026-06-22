@@ -151,7 +151,7 @@ assets:
     env: # [development | production]
 
 pwa:
-  enabled: true # The option for PWA feature (installable)
+  enabled: false # 활발한 수정 중 캐시로 인한 반영 지연 방지를 위해 비활성화(나중에 true로 복구 가능)
   cache:
     enabled: true # The option for PWA offline cache
     # Paths defined here will be excluded from the PWA cache.
