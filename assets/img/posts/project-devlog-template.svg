@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1b33"/>
+      <stop offset="100%" stop-color="#11171d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="0" y="0" width="14" height="630" fill="#6366f1"/>
+  <circle cx="1015" cy="305" r="150" fill="#6366f1" opacity="0.14"/><circle cx="1015" cy="305" r="92" fill="#6366f1" opacity="0.18"/>
+  <text x="90" y="150" font-family="'Pretendard','Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif" font-size="26" font-weight="700"
+        letter-spacing="3" fill="#a5b4fc">PROJECT · 출시작 &amp; 개발기</text>
+  <g font-family="'Pretendard','Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif" font-size="60" font-weight="800" fill="#f2f3f4">
+    <tspan x="90" y="320">개발 노하우 템플릿</tspan>
+  </g>
+  <text x="90" y="560" font-family="'Pretendard','Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif" font-size="28" font-weight="500"
+        fill="#8b96a0">컴도리돌이 · 백엔드 개발 기록</text>
+</svg>
