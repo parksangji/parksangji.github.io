@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10262b"/>
+      <stop offset="100%" stop-color="#11171d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="0" y="0" width="14" height="630" fill="#00BFB3"/>
+  <rect x="889" y="161" width="251" height="288" rx="28" fill="#ffffff"/><svg x="923.3" y="195.0" width="183.5" height="220.0" viewBox="0 0 256 307" preserveAspectRatio="xMidYMid">
+    <g>
+        <path d="M122.434516,189.21698 L0,189.21698 L0,0 L11.1304106,0 C72.6036683,0 122.434516,49.8308482 122.434516,111.304106 L122.434516,189.21698 Z" fill="#FEC514"></path>
+        <path d="M116.869311,306.086291 L122.434516,306.086291 L122.434516,189.21698 L0,189.21698 C0,253.762231 52.3240602,306.086291 116.869311,306.086291" fill="#343741"></path>
+        <polygon fill="#00BFB3" points="150.261099 306.086291 256 306.086291 256 189.21698 150.261099 189.21698"></polygon>
+    </g>
+</svg>
+  <text x="90" y="150" font-family="'Pretendard','Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif" font-size="26" font-weight="700"
+        letter-spacing="3" fill="#4fd1c5">SEARCH · LOGSTASH</text>
+  <g font-family="'Pretendard','Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif" font-size="60" font-weight="800" fill="#f2f3f4">
+    <tspan x="90" y="320">Docker로 ELK 8 구성</tspan>
+  </g>
+  <text x="90" y="560" font-family="'Pretendard','Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif" font-size="28" font-weight="500"
+        fill="#8b96a0">컴도리돌이 · 백엔드 개발 기록</text>
+</svg>
