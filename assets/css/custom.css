@@ -3,6 +3,26 @@
    (정적 사이트에서 동작하는 클라이언트 사이드 향상)
    ============================================================ */
 
+/* --- 0. 폰트: Pretendard(본문) + JetBrains Mono(코드) --- */
+:root {
+  --bs-body-font-family: "Pretendard Variable", "Pretendard", system-ui,
+    -apple-system, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --bs-font-monospace: "JetBrains Mono", "D2Coding", SFMono-Regular, Menlo,
+    Monaco, Consolas, "Liberation Mono", monospace;
+}
+body {
+  font-family: var(--bs-body-font-family);
+}
+code,
+pre,
+kbd,
+samp,
+.highlight,
+.highlighter-rouge,
+td.rouge-code {
+  font-family: var(--bs-font-monospace);
+}
+
 /* --- 1. 읽기 진행바 (포스트 페이지) --- */
 .reading-progress {
   position: fixed;
