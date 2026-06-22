@@ -164,7 +164,12 @@
   margin-left: auto;
   margin-right: auto;
 }
-#sidebar .profile-wrapper .site-title,
+/* .site-title 은 width:fit-content 라서 text-align만으론 안 가운데됨 → margin auto 로 박스 중앙 정렬 */
+#sidebar .profile-wrapper .site-title {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center;
+}
 #sidebar .profile-wrapper .site-subtitle {
   text-align: center;
 }
