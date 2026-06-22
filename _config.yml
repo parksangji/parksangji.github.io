@@ -14,12 +14,12 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: 컴도리돌이 # the main title
+title: 쿠오 # the main title
 
-tagline: 백엔드 개발 기록 # it will display as the subtitle
+tagline: Kuo의 삶을 담은 블로그 · 일상 · 여행 · 개발 # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  PostgreSQL, Elasticsearch, Spring, Kafka 등 백엔드/CS 기록
+  Kuo(쿠오)의 일상 · 여행 · 개발, 그리고 직접 만든 앱/웹 이야기
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -34,7 +34,7 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: 컴도리돌이
+  name: 쿠오
   email: "parksangji1109@gmail.com"
   fediverse_handle: # fill in your fediverse handle. E.g. "@username@domain.com"
   links:

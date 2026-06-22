@@ -4,7 +4,7 @@ title: 개인정보처리방침
 permalink: /privacy/
 ---
 
-본 방침은 **컴도리돌이**(이하 "본 블로그", `https://parksangji.github.io`)가 방문자의 개인정보를 어떻게 다루는지 안내합니다.
+본 방침은 **쿠오**(이하 "본 블로그", `https://parksangji.github.io`)가 방문자의 개인정보를 어떻게 다루는지 안내합니다.
 
 ## 1. 수집하는 정보
 
