@@ -135,6 +135,37 @@
   font-variant-numeric: tabular-nums;
 }
 
+/* 현재 보고 있는 카테고리 강조 */
+#sidebar .cat-tree a.active-cat {
+  color: var(--link-color, #1f8fff);
+  background: rgba(31, 143, 255, 0.14);
+  font-weight: 600;
+}
+
+/* --- 4b. 프로필에 녹인 정보(About) --- */
+#sidebar .profile-bio {
+  width: 100%;
+  margin-top: 0.6rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+#sidebar .profile-bio .bio-text {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  opacity: 0.78;
+  margin-bottom: 0.5rem;
+}
+#sidebar .profile-bio .bio-stack {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.7rem;
+  opacity: 0.6;
+}
+#sidebar .profile-bio .bio-stack li {
+  padding: 0.08rem 0;
+}
+
 /* --- 5. 홈 하이라이트 카드 살짝 다듬기 --- */
 #home-highlights .post-tag {
   margin: 0;

@@ -13,6 +13,20 @@
 
     <a class="site-title d-block" href="{{ '/' | relative_url }}">{{ site.title }}</a>
     <p class="site-subtitle fst-italic mb-0">{{ site.tagline }}</p>
+
+    <!-- 정보(About)를 프로필에 녹임 -->
+    <div class="profile-bio">
+      <p class="bio-text">
+        끊임없이 배우고 성장하는 백엔드 개발자 <strong>박상지</strong>입니다.
+        실질적인 문제 해결 과정을 기록합니다.
+      </p>
+      <ul class="bio-stack">
+        <li>Backend · Java · Spring Boot</li>
+        <li>DB · PostgreSQL · PostGIS</li>
+        <li>Search · Elasticsearch</li>
+        <li>Infra · Redis · Kafka · AWS</li>
+      </ul>
+    </div>
   </header>
   <!-- .profile-wrapper -->
 
@@ -25,18 +39,8 @@
           <span>{{ site.data.locales[include.lang].tabs.home | upcase }}</span>
         </a>
       </li>
-      <!-- the real tabs -->
-      {% for tab in site.tabs %}
-        <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
-          <a href="{{ tab.url | relative_url }}" class="nav-link">
-            <i class="fa-fw {{ tab.icon }}"></i>
-            {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
-
-            <span>{{ site.data.locales[include.lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
-          </a>
-        </li>
-        <!-- .nav-item -->
-      {% endfor %}
+      <!-- 나머지 탭(카테고리/태그/아카이브/정보)은 nav에서 제거.
+           카테고리는 아래 트리로, 태그/아카이브는 홈 상단으로, 정보는 프로필에 녹임. -->
     </ul>
 
     <!-- ============ 카테고리 트리 (커스텀) ============ -->
@@ -72,7 +76,7 @@
             {% endfor %}
             <li>
               {% if subs.size > 0 %}
-                <details>
+                <details data-cat="{{ top }}">
                   <summary>
                     <i class="fa-fw far fa-folder"></i><span>{{ top }}</span>
                     <span class="cat-count">{{ top_count }}</span>
