@@ -1,5 +1,18 @@
 <!-- Custom <head> metadata -->
 
+{% comment %} 커스텀 스타일 {% endcomment %}
+<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+
+{% comment %} 깜빡임 방지: 모션 허용 시에만 reveal 플래그를 미리 설정 {% endcomment %}
+<script>
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('js-reveal');
+  }
+</script>
+
+{% comment %} 커스텀 인터랙션 스크립트 {% endcomment %}
+<script defer src="{{ '/assets/js/custom.js' | relative_url }}"></script>
+
 {% comment %} Google AdSense (Auto ads). Activates only when a publisher id is set in _config.yml {% endcomment %}
 {% if site.google_adsense.id and site.google_adsense.id != empty %}
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.google_adsense.id }}"
