@@ -419,17 +419,7 @@ td.rouge-code {
   }
 }
 
-/* 모바일/태블릿: 상단바 항상 고정 (sticky로 — 자리는 차지하면서 위에 붙어 콘텐츠 겹침 없음) */
-@media (max-width: 991px) {
-  #topbar-wrapper {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0 !important;
-    z-index: 1020;
-    transform: none !important;
-    background-color: var(--topbar-bg);
-  }
-}
+/* (모바일 상단바 고정은 카테고리 페이지에서 콘텐츠와 겹침이 생겨 제거 — Chirpy 기본 동작 사용) */
 /* 오른쪽 패널용 작은 잔디 */
 .heatmap-sm .heatmap-cell {
   width: 9px;
