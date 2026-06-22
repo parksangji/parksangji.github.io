@@ -3,6 +3,10 @@ title: "텍스트 검색 최적화: phraseto_tsquery"
 date: 2024-07-02 13:40:00 +0900
 categories: [Database, PostgreSQL]
 tags: [postgresql, full-text-search, tsquery, tsvector]
+mermaid: true
+image:
+  path: /assets/img/posts/postgresql-phraseto-tsquery.svg
+  alt: "phraseto_tsquery 전문 검색"
 ---
 
 ## LIKE '%검색어%'의 한계
@@ -15,6 +19,15 @@ tags: [postgresql, full-text-search, tsquery, tsvector]
 
 - `tsvector`: 문서를 검색 가능한 토큰(어휘소)들의 집합으로 변환한 것.
 - `tsquery`: 검색 조건을 표현한 것. `@@` 연산자로 둘을 매칭합니다.
+
+```mermaid
+flowchart LR
+    D["문서<br/>'The quick brown fox'"] -->|to_tsvector| V["tsvector<br/>'brown':3 'fox':4 'quick':2"]
+    S["검색어<br/>'quick brown'"] -->|phraseto_tsquery| Q["tsquery<br/>'quick' &lt;-&gt; 'brown'"]
+    V --> M{{"@@ 매칭"}}
+    Q --> M
+    M --> R["순서·인접 일치 시 true"]
+```
 
 ```sql
 SELECT to_tsvector('english', 'The quick brown fox')

@@ -3,6 +3,10 @@ title: "PostGIS 성능 비교: GEOMETRY vs TEXT 저장 방식"
 date: 2024-06-18 16:20:00 +0900
 categories: [Database, PostgreSQL]
 tags: [postgresql, postgis, performance, index]
+mermaid: true
+image:
+  path: /assets/img/posts/postgresql-postgis-geometry-vs-text.svg
+  alt: "PostGIS GEOMETRY vs TEXT 성능 비교"
 ---
 
 ## "그냥 문자열로 저장하면 안 되나요?"
@@ -81,6 +85,15 @@ WHERE ST_DWithin(
 | 데이터 검증 | 잘못된 좌표 INSERT 시 에러 | 아무 문자열이나 들어감 |
 
 `TEXT` 방식은 데이터가 적을 땐 차이를 못 느끼지만, 수십만~수백만 건으로 가면 검색 시간이 수십 배 이상 벌어집니다. 게다가 `TEXT`는 `'abc'` 같은 엉뚱한 값도 그대로 들어가서, **데이터 무결성**까지 깨질 수 있습니다.
+
+두 방식의 검색 경로를 그림으로 비교하면 차이가 분명합니다.
+
+```mermaid
+flowchart LR
+    Q[반경 검색 쿼리] --> G{저장 방식}
+    G -->|geometry| GI[GiST 인덱스로<br/>후보 행만 추출] --> GD[정밀 거리 계산] --> R1[빠른 결과]
+    G -->|TEXT| TS[전체 행 Seq Scan] --> TP[문자열 파싱<br/>+ 형변환] --> TD[전 행 거리 계산] --> R2[느린 결과]
+```
 
 ## 정리 & 주의점
 

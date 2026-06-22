@@ -3,6 +3,9 @@ title: 제약조건 설정 시 주의해야 할 부분
 date: 2024-07-30 15:10:00 +0900
 categories: [Database, PostgreSQL]
 tags: [postgresql, constraint, pitfall, migration]
+image:
+  path: /assets/img/posts/postgresql-constraint-pitfalls.svg
+  alt: 제약조건 설정 시 주의점
 ---
 
 ## 제약조건은 "거는 것"보다 "운영 중에 거는 것"이 어렵다

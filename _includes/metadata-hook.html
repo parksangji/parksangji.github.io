@@ -1,0 +1,7 @@
+<!-- Custom <head> metadata -->
+
+{% comment %} Google AdSense (Auto ads). Activates only when a publisher id is set in _config.yml {% endcomment %}
+{% if site.google_adsense.id and site.google_adsense.id != empty %}
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.google_adsense.id }}"
+    crossorigin="anonymous"></script>
+{% endif %}

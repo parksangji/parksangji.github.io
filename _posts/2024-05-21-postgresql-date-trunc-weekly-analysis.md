@@ -3,6 +3,9 @@ title: "주 단위 데이터 분석, DATE_TRUNC로 해결하기"
 date: 2024-05-21 14:00:00 +0900
 categories: [Database, PostgreSQL]
 tags: [postgresql, date_trunc, aggregation, analytics]
+image:
+  path: /assets/img/posts/postgresql-date-trunc-weekly-analysis.svg
+  alt: DATE_TRUNC로 주 단위 데이터 분석
 ---
 
 ## 일 단위는 되는데 주 단위가 안 된다

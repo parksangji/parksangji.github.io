@@ -75,6 +75,11 @@ analytics:
 pageviews:
   provider: # now only supports 'goatcounter'
 
+# Google AdSense. Fill in the publisher ID to enable Auto ads.
+# After filling the id, enable "Auto ads" in your AdSense dashboard.
+google_adsense:
+  id: "" # TODO: 'ca-pub-XXXXXXXXXXXXXXXX' (AdSense 승인 후 발급)
+
 # Prefer color scheme setting.
 #
 # Note: Keep empty will follow the system prefer color by default,

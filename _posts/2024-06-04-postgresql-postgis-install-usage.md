@@ -3,6 +3,9 @@ title: PostGIS 설치 및 사용
 date: 2024-06-04 11:15:00 +0900
 categories: [Database, PostgreSQL]
 tags: [postgresql, postgis, gis, spatial]
+image:
+  path: /assets/img/posts/postgresql-postgis-install-usage.svg
+  alt: PostGIS 설치 및 사용
 ---
 
 ## 위경도를 그냥 숫자 두 개로 저장하다가

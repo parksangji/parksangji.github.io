@@ -3,6 +3,9 @@ title: "제약조건에 대해서 (PRIMARY KEY, UNIQUE, NOT NULL, CHECK)"
 date: 2024-07-16 10:50:00 +0900
 categories: [Database, PostgreSQL]
 tags: [postgresql, constraint, data-integrity, schema]
+image:
+  path: /assets/img/posts/postgresql-constraints.svg
+  alt: PostgreSQL 제약조건
 ---
 
 ## 검증 로직을 어디에 둘 것인가
