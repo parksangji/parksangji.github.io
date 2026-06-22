@@ -15,13 +15,11 @@
         <div id="blog-heatmap" class="heatmap"></div>
       </div>
 
-      <!-- 실제 GitHub 잔디 -->
+      <!-- 실제 GitHub 잔디 (htmlproofer 회피 위해 JS로 주입) -->
       <div class="grass-block mt-3">
         <div class="grass-label">🐙 GitHub 기여 (@parksangji)</div>
-        <a href="https://github.com/parksangji" target="_blank" rel="noopener noreferrer">
-          <img class="gh-grass" src="https://ghchart.rshah.org/216e39/parksangji"
-               alt="parksangji GitHub 기여 잔디" loading="lazy">
-        </a>
+        <a id="gh-grass-link" href="https://github.com/parksangji"
+           target="_blank" rel="noopener noreferrer" aria-label="GitHub 프로필"></a>
       </div>
     </div>
   </div>
