@@ -39,12 +39,13 @@
 /* --- 3. 홈 글 목록: 세로 카드(이미지→제목→설명) + 반응형 그리드 --- */
 #post-list.post-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* 모바일 포함 기본 2열 */
+  gap: 1rem;
 }
-@media (max-width: 768px) {
+@media (min-width: 992px) {
   #post-list.post-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* 데스크톱 3열 */
+    gap: 1.25rem;
   }
 }
 #post-list.post-grid .card-wrapper {
@@ -69,6 +70,46 @@
 }
 #post-list.post-grid .card-body {
   flex: 1 1 auto;
+  padding: 1rem;
+}
+/* 제목·설명 줄 수 제한으로 카드 높이 균일하게 */
+#post-list.post-grid .card-title {
+  font-size: 1.05rem;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+#post-list.post-grid .card-text.content p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+#post-list.post-grid .read-more {
+  color: var(--link-color, #1f8fff);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+/* 모바일: 카드 조금 작게(2열 유지) */
+@media (max-width: 768px) {
+  #post-list.post-grid {
+    gap: 0.7rem;
+  }
+  #post-list.post-grid .card-body {
+    padding: 0.7rem;
+  }
+  #post-list.post-grid .card-title {
+    font-size: 0.92rem;
+    -webkit-line-clamp: 2;
+  }
+  #post-list.post-grid .card-text.content {
+    font-size: 0.8rem;
+  }
+  #post-list.post-grid .post-meta {
+    font-size: 0.72rem;
+  }
 }
 
 /* 카드 호버 리프트 */
