@@ -221,6 +221,7 @@ panel_includes: [activity-panel]
 
 <script>
   (function () {
+    function render() {
     var el = document.getElementById('today-study-data');
     var grid = document.getElementById('ts-grid');
     var section = document.getElementById('today-study');
@@ -230,7 +231,7 @@ panel_includes: [activity-panel]
     try { posts = JSON.parse(el.textContent); } catch (e) { posts = []; }
     if (!posts.length) { if (section) section.style.display = 'none'; return; }
 
-    // 날짜 시드(YYYYMMDD) — 같은 날엔 항상 같은 4개, 다음 날엔 자동으로 다른 4개.
+    /* 날짜 시드(YYYYMMDD): 같은 날엔 항상 같은 4개, 다음 날엔 자동으로 다른 4개. */
     var now = new Date();
     var seed = now.getFullYear() * 10000 + (now.getMonth() + 1) * 100 + now.getDate();
 
@@ -250,7 +251,6 @@ panel_includes: [activity-panel]
     }
     var picked = pool.slice(0, Math.min(4, pool.length));
 
-    // 헤더 날짜 라벨
     var label = document.getElementById('ts-date-label');
     if (label) label.textContent = (now.getMonth() + 1) + '월 ' + now.getDate() + '일';
 
@@ -260,9 +260,9 @@ panel_includes: [activity-panel]
 
     grid.innerHTML = picked.map(function (p) {
       var thumb = '';
-      if (p.img) {
-        var lqip = p.lqip ? ' style="background-image:url(' + p.lqip + ');background-size:cover;"' : '';
-        thumb = '<div class="ts-thumb"' + lqip + '><img src="' + esc(p.img) + '" alt="" loading="lazy" onerror="this.remove()"></div>';
+      var bgimg = p.img || p.lqip;
+      if (bgimg) {
+        thumb = '<div class="ts-thumb" style="background-image:url(' + bgimg + ');background-size:cover;background-position:center;"></div>';
       }
       var d = new Date(p.date);
       var dateStr = isNaN(d) ? '' : (d.getFullYear() + '.' + String(d.getMonth() + 1).padStart(2, '0') + '.' + String(d.getDate()).padStart(2, '0'));
@@ -275,5 +275,11 @@ panel_includes: [activity-panel]
         '</div>' +
       '</a>';
     }).join('');
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', render);
+    } else {
+      render();
+    }
   })();
 </script>
