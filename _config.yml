@@ -133,9 +133,9 @@ comments:
   # Giscus options › https://giscus.app
   giscus:
     repo: parksangji/parksangji.github.io # <gh-username>/<repo>
-    repo_id: "" # TODO: giscus.app 에서 발급
+    repo_id: "R_kgDOOWW9PA"
     category: Announcements
-    category_id: "" # TODO: giscus.app 에서 발급
+    category_id: "DIC_kwDOOWW9PM4C_org"
     mapping: pathname # optional, default to 'pathname'
     strict: # optional, default to '0'
     input_position: bottom # optional, default to 'bottom'
