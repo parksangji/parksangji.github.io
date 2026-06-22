@@ -153,11 +153,27 @@
 }
 
 /* --- 4b. 프로필에 녹인 정보(About) --- */
+/* 프로필 영역: 비대칭 패딩 보정 + 전체 가운데 정렬로 통일 */
+#sidebar .profile-wrapper {
+  width: 100%;
+  padding-left: 1.25rem !important;
+  padding-right: 1.25rem !important;
+  text-align: center;
+}
+#sidebar .profile-wrapper #avatar {
+  margin-left: auto;
+  margin-right: auto;
+}
+#sidebar .profile-wrapper .site-title,
+#sidebar .profile-wrapper .site-subtitle {
+  text-align: center;
+}
+
 #sidebar .profile-bio {
   width: 100%;
   margin-top: 0.6rem;
-  padding: 0 1rem;
-  text-align: inherit; /* 제목/태그라인과 같은 정렬을 따름 */
+  padding: 0;
+  text-align: center; /* 제목/태그라인과 동일하게 가운데 */
 }
 #sidebar .profile-bio .bio-text {
   font-size: 0.78rem;
