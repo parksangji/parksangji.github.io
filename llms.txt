@@ -1,0 +1,18 @@
+---
+permalink: /llms.txt
+# LLM/AI 크롤러용 콘텐츠 맵 (llmstxt.org 제안 표준)
+---
+# {{ site.title }}
+
+> {{ site.description }}
+
+Java · Spring Boot · PostgreSQL · Elasticsearch · Redis · Kafka 등 백엔드/CS 학습 기록과 직접 만든 앱/웹 개발기를 담은 개인 기술 블로그입니다. 운영자 닉네임은 쿠오(Kuo).
+
+- 사이트: {{ '/' | absolute_url }}
+- 전체 색인(sitemap): {{ '/sitemap.xml' | absolute_url }}
+- 소개: {{ '/about/' | absolute_url }}
+
+## 글 ({{ site.posts | size }}편)
+
+{% for post in site.posts %}- [{{ post.title }}]({{ post.url | absolute_url }}){% if post.description %} — {{ post.description | strip_html | strip_newlines | truncate: 140 }}{% elsif post.categories %} — {{ post.categories | join: " / " }}{% endif %}
+{% endfor %}

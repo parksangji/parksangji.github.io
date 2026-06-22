@@ -1,0 +1,37 @@
+---
+permalink: /robots.txt
+# robots 규칙 — 일반 검색엔진 + AI/LLM 크롤러 명시 허용
+---
+
+User-agent: *
+Disallow: /norobots/
+
+# AI / LLM 크롤러 — 명시적으로 허용 (AI 답변·검색에 노출되길 원함)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: {{ '/sitemap.xml' | absolute_url }}
