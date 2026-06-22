@@ -31,19 +31,7 @@
   <!-- .profile-wrapper -->
 
   <nav class="flex-column flex-grow-1 w-100 ps-0">
-    <ul class="nav">
-      <!-- home -->
-      <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
-        <a href="{{ '/' | relative_url }}" class="nav-link">
-          <i class="fa-fw fas fa-home"></i>
-          <span>{{ site.data.locales[include.lang].tabs.home | upcase }}</span>
-        </a>
-      </li>
-      <!-- 나머지 탭(카테고리/태그/아카이브/정보)은 nav에서 제거.
-           카테고리는 아래 트리로, 태그/아카이브는 홈 상단으로, 정보는 프로필에 녹임. -->
-    </ul>
-
-    <!-- ============ 카테고리 트리 (커스텀) ============ -->
+    <!-- ============ 메뉴(홈 + 카테고리 트리) ============ -->
     {% assign tops = '' | split: '' %}
     {% for post in site.posts %}
       {% assign t = post.categories[0] %}
@@ -64,6 +52,13 @@
 
     {% if tops.size > 0 %}
       <div class="sidebar-cats">
+        <ul class="cat-tree menu-top">
+          <li>
+            <a href="{{ '/' | relative_url }}" class="home-link{% if page.layout == 'home' %} active-cat{% endif %}">
+              <i class="fa-fw fas fa-house"></i><span>홈</span>
+            </a>
+          </li>
+        </ul>
         <p class="cats-heading"><span class="pokeball" aria-hidden="true"></span><span>POKéDEX</span></p>
         <ul class="cat-tree">
           {% for top in tops %}

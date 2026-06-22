@@ -65,9 +65,18 @@
 }
 #sidebar .sidebar-cats {
   width: 100%;
-  margin-top: 0.6rem;
+  margin-top: 0.4rem;
   padding: 0 1rem 0.5rem 1.5rem;
   font-size: 0.82rem;
+}
+/* 홈을 카테고리와 같은 스타일로 통합 */
+#sidebar .menu-top {
+  margin-bottom: 0.5rem;
+}
+#sidebar .menu-top .home-link i {
+  width: 15px;
+  text-align: center;
+  opacity: 0.85;
 }
 #sidebar .cats-heading {
   font-size: 0.7rem;
