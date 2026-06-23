@@ -2,7 +2,7 @@
 title: "요청 검증(Bean Validation): @Valid, @Validated, 커스텀 제약"
 date: 2025-10-16 13:20:00 +0900
 series: "Spring Boot"
-categories: [Backend, Spring Boot]
+categories: [Backend]
 tags: [spring-boot, validation, bean-validation, jakarta, hibernate-validator]
 mermaid: true
 image:

@@ -2,7 +2,7 @@
 title: "Starter와 의존성 관리(BOM): 버전 지옥에서 벗어나기"
 date: 2025-09-11 10:20:00 +0900
 series: "Spring Boot"
-categories: [Backend, Spring Boot]
+categories: [Backend]
 tags: [spring-boot, starter, dependency-management, bom, autoconfigure, gradle]
 mermaid: true
 image:

@@ -2,7 +2,7 @@
 title: "Redis 영속성: RDB vs AOF (그리고 MISCONF 에러)"
 date: 2025-02-04 11:10:00 +0900
 series: "Redis"
-categories: [Infra, Redis]
+categories: [Infra]
 tags: [redis, persistence, rdb, aof]
 mermaid: true
 image:

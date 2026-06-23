@@ -2,7 +2,7 @@
 title: "Apache Kafka란: 토픽 · 파티션 · 오프셋"
 date: 2025-05-13 10:00:00 +0900
 series: "Kafka"
-categories: [Infra, Kafka]
+categories: [Infra]
 tags: [kafka, event-streaming, partition, offset]
 mermaid: true
 image:

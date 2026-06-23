@@ -2,7 +2,7 @@
 title: "[이펙티브 자바] 아이템 7: 다 쓴 객체 참조를 해제하라"
 date: 2024-02-20 11:00:00 +0900
 series: "이펙티브 자바"
-categories: [Java, Effective Java]
+categories: [Java]
 tags: [java, effective-java, memory-leak, gc]
 image:
   path: /assets/img/posts/effective-java-item7.png

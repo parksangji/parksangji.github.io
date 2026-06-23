@@ -2,7 +2,7 @@
 title: "Spring Boot Actuator — 엔드포인트는 어떻게 만들어지고 노출되나"
 date: 2026-03-12 10:00:00 +0900
 series: "Spring Boot"
-categories: [Backend, Spring Boot]
+categories: [Backend]
 tags: [spring-boot, actuator, monitoring, health, operations, internals]
 mermaid: true
 image:

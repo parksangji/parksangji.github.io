@@ -2,7 +2,7 @@
 title: "Spring Framework 7의 HTTP API 버저닝"
 date: 2025-12-18 10:30:00 +0900
 series: "Spring Boot"
-categories: [Backend, Spring Boot]
+categories: [Backend]
 tags: [spring-boot, api-versioning, rest-api, spring-framework-7, internals]
 mermaid: true
 image:

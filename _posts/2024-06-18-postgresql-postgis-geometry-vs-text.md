@@ -2,7 +2,7 @@
 title: "PostGIS 성능 비교: GEOMETRY vs TEXT 저장 방식"
 date: 2024-06-18 16:20:00 +0900
 series: "PostgreSQL"
-categories: [Database, PostgreSQL]
+categories: [Database]
 tags: [postgresql, postgis, performance, index]
 mermaid: true
 image:

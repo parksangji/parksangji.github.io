@@ -1,7 +1,7 @@
 ---
 title: "운영체제 가상 메모리: 스왑 파일 생성 및 관리 방법"
 date: 2024-12-31 14:00:00 +0900
-categories: [Infra, Linux]
+categories: [Infra]
 tags: [linux, virtual-memory, swap, operating-system]
 mermaid: true
 image:

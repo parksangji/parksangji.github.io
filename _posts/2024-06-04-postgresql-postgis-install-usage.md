@@ -2,7 +2,7 @@
 title: PostGIS 설치 및 사용
 date: 2024-06-04 11:15:00 +0900
 series: "PostgreSQL"
-categories: [Database, PostgreSQL]
+categories: [Database]
 tags: [postgresql, postgis, gis, spatial]
 image:
   path: /assets/img/posts/postgresql-postgis-install-usage.png

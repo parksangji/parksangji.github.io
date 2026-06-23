@@ -2,7 +2,7 @@
 title: "Elasticsearch 기본 개념: 역색인(Inverted Index)과 문서 모델"
 date: 2024-08-13 10:00:00 +0900
 series: "Elasticsearch"
-categories: [Search, Elasticsearch]
+categories: [Search]
 tags: [elasticsearch, inverted-index, search, lucene]
 mermaid: true
 image:

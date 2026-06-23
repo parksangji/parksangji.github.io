@@ -1,7 +1,7 @@
 ---
 title: "AWS 보안 그룹 설정과 원본(Source) 개념"
 date: 2024-12-24 10:00:00 +0900
-categories: [Infra, AWS]
+categories: [Infra]
 tags: [aws, security-group, firewall, networking]
 mermaid: true
 image:

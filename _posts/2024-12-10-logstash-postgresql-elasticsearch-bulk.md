@@ -2,7 +2,7 @@
 title: "Logstash를 활용한 PostgreSQL 데이터 Elasticsearch Bulk Insert"
 date: 2024-12-10 11:20:00 +0900
 series: "Logstash"
-categories: [Search, Logstash]
+categories: [Search]
 tags: [logstash, postgresql, elasticsearch, jdbc, etl]
 mermaid: true
 image:

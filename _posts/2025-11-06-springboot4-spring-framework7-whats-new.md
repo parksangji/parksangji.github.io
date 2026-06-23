@@ -2,7 +2,7 @@
 title: "Spring Boot 4 · Spring Framework 7, 무엇이 바뀌었나"
 date: 2025-11-06 10:00:00 +0900
 series: "Spring Boot"
-categories: [Backend, Spring Boot]
+categories: [Backend]
 tags: [spring-boot, spring-framework, spring-boot-4, jspecify, migration]
 mermaid: true
 image:

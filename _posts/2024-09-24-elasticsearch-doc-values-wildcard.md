@@ -2,7 +2,7 @@
 title: "성능: doc_values와 wildcard 쿼리 제대로 이해하기"
 date: 2024-09-24 10:40:00 +0900
 series: "Elasticsearch"
-categories: [Search, Elasticsearch]
+categories: [Search]
 tags: [elasticsearch, doc-values, wildcard, performance]
 mermaid: true
 image:

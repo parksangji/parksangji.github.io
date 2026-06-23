@@ -2,7 +2,7 @@
 title: "Docker로 Kafka 구성하기 (KRaft 모드)"
 date: 2025-06-24 14:00:00 +0900
 series: "Kafka"
-categories: [Infra, Kafka]
+categories: [Infra]
 tags: [kafka, docker, kraft, zookeeper]
 mermaid: true
 image:

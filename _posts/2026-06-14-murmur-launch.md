@@ -1,7 +1,7 @@
 ---
 title: "[출시작] 서버도 인터넷도 계정도 없는 채팅앱 'Murmur'를 만들었습니다"
 date: 2026-06-14 10:00:00 +0900
-categories: [Project, Showcase]
+categories: [Project]
 tags: [project, showcase, murmur, mesh, electron, flutter]
 image:
   path: /assets/img/posts/murmur-cover.png

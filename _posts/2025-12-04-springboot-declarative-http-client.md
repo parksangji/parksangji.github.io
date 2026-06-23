@@ -2,7 +2,7 @@
 title: "선언적 HTTP 클라이언트: @HttpExchange와 RestClient"
 date: 2025-12-04 14:30:00 +0900
 series: "Spring Boot"
-categories: [Backend, Spring Boot]
+categories: [Backend]
 tags: [spring-boot, restclient, http-interface, httpexchange, proxy, internals]
 mermaid: true
 image:

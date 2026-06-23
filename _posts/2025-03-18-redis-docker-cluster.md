@@ -2,7 +2,7 @@
 title: "Docker로 Redis 클러스터 구성하기"
 date: 2025-03-18 10:50:00 +0900
 series: "Redis"
-categories: [Infra, Redis]
+categories: [Infra]
 tags: [redis, cluster, docker, hash-slot]
 mermaid: true
 image:

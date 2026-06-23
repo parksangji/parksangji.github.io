@@ -2,7 +2,7 @@
 title: "Spring Security 기초: 필터 체인으로 보는 인증과 인가"
 date: 2026-05-07 14:00:00 +0900
 series: "Spring Boot"
-categories: [Backend, Spring Boot]
+categories: [Backend]
 tags: [spring-boot, spring-security, authentication, authorization, filter-chain, internals]
 mermaid: true
 image:

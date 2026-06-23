@@ -2,7 +2,7 @@
 title: "가상 스레드(Virtual Threads)와 Spring Boot"
 date: 2025-11-20 11:15:00 +0900
 series: "Spring Boot"
-categories: [Backend, Spring Boot]
+categories: [Backend]
 tags: [spring-boot, virtual-threads, java21, concurrency, loom, pinning]
 mermaid: true
 image:

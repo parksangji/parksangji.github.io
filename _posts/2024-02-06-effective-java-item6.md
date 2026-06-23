@@ -2,7 +2,7 @@
 title: "[이펙티브 자바] 아이템 6: 불필요한 객체 생성을 피하라"
 date: 2024-02-06 10:00:00 +0900
 series: "이펙티브 자바"
-categories: [Java, Effective Java]
+categories: [Java]
 tags: [java, effective-java, performance, object]
 image:
   path: /assets/img/posts/effective-java-item6.png

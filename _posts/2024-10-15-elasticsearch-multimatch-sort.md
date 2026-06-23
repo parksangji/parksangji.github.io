@@ -2,7 +2,7 @@
 title: "MultiMatch와 다중 정렬, Query String (feat. Java)"
 date: 2024-10-15 13:20:00 +0900
 series: "Elasticsearch"
-categories: [Search, Elasticsearch]
+categories: [Search]
 tags: [elasticsearch, multi-match, sort, query-string, java]
 mermaid: true
 image:

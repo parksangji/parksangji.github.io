@@ -2,7 +2,7 @@
 title: "텍스트 검색 최적화: phraseto_tsquery"
 date: 2024-07-02 13:40:00 +0900
 series: "PostgreSQL"
-categories: [Database, PostgreSQL]
+categories: [Database]
 tags: [postgresql, full-text-search, tsquery, tsvector]
 mermaid: true
 image:

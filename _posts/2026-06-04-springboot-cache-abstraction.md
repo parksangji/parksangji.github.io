@@ -2,7 +2,7 @@
 title: "캐시 추상화: @Cacheable은 어떻게 동작하고 어디서 터지나"
 date: 2026-06-04 10:30:00 +0900
 series: "Spring Boot"
-categories: [Backend, Spring Boot]
+categories: [Backend]
 tags: [spring-boot, cache, cacheable, redis, aop, internals]
 mermaid: true
 image:

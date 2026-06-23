@@ -2,7 +2,7 @@
 title: "Spring Data JPA 기본기: Repository와 쿼리 메서드"
 date: 2025-10-02 14:10:00 +0900
 series: "Spring Boot"
-categories: [Backend, Spring Boot]
+categories: [Backend]
 tags: [spring-boot, jpa, spring-data, hibernate, n+1, persistence-context]
 mermaid: true
 image:

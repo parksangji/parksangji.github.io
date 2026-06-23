@@ -1,7 +1,7 @@
 ---
 title: "[개발기] 서버 없는 채팅 Murmur, 어디서 막혔나"
 date: 2026-06-14 18:00:00 +0900
-categories: [Project, Dev Notes]
+categories: [Project]
 tags: [project, devlog, murmur, mesh, mdns, ble, electron, flutter]
 mermaid: true
 image:

@@ -2,7 +2,7 @@
 title: "GraalVM 네이티브 이미지와 AOT"
 date: 2026-02-12 13:40:00 +0900
 series: "Spring Boot"
-categories: [Backend, Spring Boot]
+categories: [Backend]
 tags: [spring-boot, graalvm, native-image, aot, closed-world, startup]
 mermaid: true
 image:

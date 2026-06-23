@@ -2,7 +2,7 @@
 title: "Spring MVC vs WebFlux, 언제 무엇을 쓸까"
 date: 2025-09-25 11:30:00 +0900
 series: "Spring Boot"
-categories: [Backend, Spring Boot]
+categories: [Backend]
 tags: [spring-boot, spring-mvc, webflux, reactive, virtual-threads, netty, reactor]
 mermaid: true
 image:

@@ -2,7 +2,7 @@
 title: "@SpringBootApplication 한 줄 뜯어보기"
 date: 2025-08-27 09:30:00 +0900
 series: "Spring Boot"
-categories: [Backend, Spring Boot]
+categories: [Backend]
 tags: [spring-boot, annotation, component-scan, internals, startup]
 mermaid: true
 image:

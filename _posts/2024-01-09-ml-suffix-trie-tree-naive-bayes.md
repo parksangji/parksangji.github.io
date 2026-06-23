@@ -2,7 +2,7 @@
 title: "접미사 트라이(Suffix Trie), 접미사 트리(Suffix Tree), 나이브 베이즈(Naive Bayes)"
 date: 2024-01-09 10:00:00 +0900
 series: "머신러닝 기초"
-categories: [Machine Learning, 기초]
+categories: [Machine Learning]
 tags: [suffix-trie, suffix-tree, naive-bayes, algorithm]
 mermaid: true
 math: true

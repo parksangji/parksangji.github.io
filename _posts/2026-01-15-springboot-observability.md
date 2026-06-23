@@ -2,7 +2,7 @@
 title: "Observability: Micrometer와 분산 추적"
 date: 2026-01-15 11:00:00 +0900
 series: "Spring Boot"
-categories: [Backend, Spring Boot]
+categories: [Backend]
 tags: [spring-boot, observability, micrometer, tracing, actuator, opentelemetry]
 mermaid: true
 image:

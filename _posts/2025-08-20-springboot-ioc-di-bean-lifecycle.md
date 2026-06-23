@@ -2,7 +2,7 @@
 title: "IoC 컨테이너와 의존성 주입(DI), 그리고 Bean 생명주기"
 date: 2025-08-20 11:00:00 +0900
 series: "Spring Boot"
-categories: [Backend, Spring Boot]
+categories: [Backend]
 tags: [spring, ioc, dependency-injection, bean-lifecycle, internals, proxy]
 mermaid: true
 image:

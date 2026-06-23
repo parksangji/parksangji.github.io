@@ -1,7 +1,7 @@
 ---
 title: "MyBatis: WHERE 1=1 대신 trim으로 해결하기"
 date: 2024-10-29 11:00:00 +0900
-categories: [Backend, MyBatis]
+categories: [Backend]
 tags: [mybatis, dynamic-sql, trim, where]
 image:
   path: /assets/img/posts/mybatis-where-trim.png

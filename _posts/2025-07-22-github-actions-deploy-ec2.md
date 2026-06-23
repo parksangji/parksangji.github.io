@@ -1,7 +1,7 @@
 ---
 title: "GitHub Actions로 Spring Boot 애플리케이션을 AWS EC2에 배포하기"
 date: 2025-07-22 10:30:00 +0900
-categories: [DevOps, GitHub]
+categories: [DevOps]
 tags: [github-actions, ci-cd, spring-boot, aws, ec2]
 mermaid: true
 image:

@@ -2,7 +2,7 @@
 title: "Redis 고가용성: Single, Replication, Sentinel, Cluster"
 date: 2025-02-25 14:20:00 +0900
 series: "Redis"
-categories: [Infra, Redis]
+categories: [Infra]
 tags: [redis, high-availability, sentinel, cluster, replication]
 mermaid: true
 image:

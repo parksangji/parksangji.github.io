@@ -2,7 +2,7 @@
 title: "집계(Aggregation): 버킷 집계 vs 메트릭 집계"
 date: 2024-09-10 14:00:00 +0900
 series: "Elasticsearch"
-categories: [Search, Elasticsearch]
+categories: [Search]
 tags: [elasticsearch, aggregation, bucket, metric, cardinality]
 mermaid: true
 image:

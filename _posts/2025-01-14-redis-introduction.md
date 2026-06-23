@@ -2,7 +2,7 @@
 title: "Redis란 무엇인가: 인메모리와 자료구조"
 date: 2025-01-14 10:00:00 +0900
 series: "Redis"
-categories: [Infra, Redis]
+categories: [Infra]
 tags: [redis, in-memory, cache, data-structure]
 mermaid: true
 image:

@@ -2,7 +2,7 @@
 title: PostgreSQL B-tree 인덱스에 대해서
 date: 2024-05-07 10:30:00 +0900
 series: "PostgreSQL"
-categories: [Database, PostgreSQL]
+categories: [Database]
 tags: [postgresql, index, b-tree, performance]
 mermaid: true
 image:

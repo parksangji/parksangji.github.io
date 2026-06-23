@@ -2,7 +2,7 @@
 title: "Spring Boot에서 Redis 클러스터 설정하기"
 date: 2025-04-08 11:30:00 +0900
 series: "Redis"
-categories: [Infra, Redis]
+categories: [Infra]
 tags: [redis, spring-boot, cluster, lettuce, serialization]
 mermaid: true
 image:

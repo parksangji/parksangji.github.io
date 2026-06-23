@@ -2,7 +2,7 @@
 title: "Docker · Elasticsearch · Spring Boot로 검색 기능 구현하기"
 date: 2024-11-05 10:30:00 +0900
 series: "Elasticsearch"
-categories: [Search, Elasticsearch]
+categories: [Search]
 tags: [elasticsearch, spring-boot, docker, search, inverted-index, analyzer]
 mermaid: true
 image:

@@ -2,7 +2,7 @@
 title: "Spring Boot에서 Kafka 사용하기"
 date: 2025-07-15 10:40:00 +0900
 series: "Kafka"
-categories: [Infra, Kafka]
+categories: [Infra]
 tags: [kafka, spring-boot, spring-kafka, kafkalistener, offset, dlt]
 mermaid: true
 image:

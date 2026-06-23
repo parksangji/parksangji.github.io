@@ -2,7 +2,7 @@
 title: "외부 설정 제대로 쓰기: PropertySource 우선순위 · @ConfigurationProperties · Profile"
 date: 2025-09-03 14:00:00 +0900
 series: "Spring Boot"
-categories: [Backend, Spring Boot]
+categories: [Backend]
 tags: [spring-boot, configuration, profile, yaml, environment]
 mermaid: true
 image:

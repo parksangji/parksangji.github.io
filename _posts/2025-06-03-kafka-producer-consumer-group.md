@@ -2,7 +2,7 @@
 title: "Kafka Producer/Consumer와 컨슈머 그룹"
 date: 2025-06-03 11:20:00 +0900
 series: "Kafka"
-categories: [Infra, Kafka]
+categories: [Infra]
 tags: [kafka, producer, consumer, consumer-group, rebalancing]
 mermaid: true
 image:

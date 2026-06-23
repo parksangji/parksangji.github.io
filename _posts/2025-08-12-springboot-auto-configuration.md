@@ -2,7 +2,7 @@
 title: Spring Boot 자동 구성(Auto-configuration)은 어떻게 동작하나
 date: 2025-08-12 10:00:00 +0900
 series: "Spring Boot"
-categories: [Backend, Spring Boot]
+categories: [Backend]
 tags: [spring-boot, auto-configuration, conditional, internals, startup]
 mermaid: true
 image:

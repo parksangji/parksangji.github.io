@@ -2,7 +2,7 @@
 title: "베이지안 네트워크(Bayesian Network)"
 date: 2024-01-16 11:00:00 +0900
 series: "머신러닝 기초"
-categories: [Machine Learning, 기초]
+categories: [Machine Learning]
 tags: [bayesian-network, probability, dag, inference]
 mermaid: true
 math: true

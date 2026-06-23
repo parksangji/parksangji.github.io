@@ -2,7 +2,7 @@
 title: "테스트 슬라이스: @WebMvcTest · @DataJpaTest · @SpringBootTest"
 date: 2026-04-09 11:20:00 +0900
 series: "Spring Boot"
-categories: [Backend, Spring Boot]
+categories: [Backend]
 tags: [spring-boot, test, webmvctest, datajpatest, context-caching]
 mermaid: true
 image:

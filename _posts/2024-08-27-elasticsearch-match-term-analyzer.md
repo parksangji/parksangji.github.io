@@ -2,7 +2,7 @@
 title: "검색의 핵심: match vs term, 그리고 분석기(Analyzer)"
 date: 2024-08-27 11:00:00 +0900
 series: "Elasticsearch"
-categories: [Search, Elasticsearch]
+categories: [Search]
 tags: [elasticsearch, analyzer, match, term, query-dsl]
 mermaid: true
 image:

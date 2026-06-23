@@ -2,7 +2,7 @@
 title: "REST API 예외 처리: @RestControllerAdvice로 일관된 응답 만들기"
 date: 2025-09-18 10:00:00 +0900
 series: "Spring Boot"
-categories: [Backend, Spring Boot]
+categories: [Backend]
 tags: [spring-boot, rest-api, exception-handling, problemdetail, rfc9457]
 mermaid: true
 image:

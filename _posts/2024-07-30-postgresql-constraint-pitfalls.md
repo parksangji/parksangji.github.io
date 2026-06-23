@@ -2,7 +2,7 @@
 title: 제약조건 설정 시 주의해야 할 부분
 date: 2024-07-30 15:10:00 +0900
 series: "PostgreSQL"
-categories: [Database, PostgreSQL]
+categories: [Database]
 tags: [postgresql, constraint, pitfall, migration]
 image:
   path: /assets/img/posts/postgresql-constraint-pitfalls.png

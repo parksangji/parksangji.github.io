@@ -2,7 +2,7 @@
 title: "[이펙티브 자바] 아이템 8: finalizer와 cleaner 사용을 피하라"
 date: 2024-03-05 14:00:00 +0900
 series: "이펙티브 자바"
-categories: [Java, Effective Java]
+categories: [Java]
 tags: [java, effective-java, finalizer, cleaner, autocloseable]
 image:
   path: /assets/img/posts/effective-java-item8.png

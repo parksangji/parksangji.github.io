@@ -2,7 +2,7 @@
 title: "[이펙티브 자바] 아이템 9: try-finally보다 try-with-resources를 사용하라"
 date: 2024-03-19 10:30:00 +0900
 series: "이펙티브 자바"
-categories: [Java, Effective Java]
+categories: [Java]
 tags: [java, effective-java, try-with-resources, autocloseable]
 image:
   path: /assets/img/posts/effective-java-item9.png

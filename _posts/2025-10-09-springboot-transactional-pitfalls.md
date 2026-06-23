@@ -2,7 +2,7 @@
 title: "@Transactional 동작 원리와 자주 빠지는 함정"
 date: 2025-10-09 10:40:00 +0900
 series: "Spring Boot"
-categories: [Backend, Spring Boot]
+categories: [Backend]
 tags: [spring, transactional, aop, proxy, propagation, internals]
 mermaid: true
 image:

@@ -2,7 +2,7 @@
 title: "제약조건에 대해서 (PRIMARY KEY, UNIQUE, NOT NULL, CHECK)"
 date: 2024-07-16 10:50:00 +0900
 series: "PostgreSQL"
-categories: [Database, PostgreSQL]
+categories: [Database]
 tags: [postgresql, constraint, data-integrity, schema]
 image:
   path: /assets/img/posts/postgresql-constraints.png
