@@ -30,6 +30,7 @@ panel_includes: [activity-panel]
       "lqip": {{ post.image.lqip | jsonify }},
       "alt": {{ post.image.alt | default: post.title | jsonify }},
       "cat": {{ post.categories | join: ' · ' | jsonify }},
+      "cat0": {{ post.categories[0] | jsonify }},
       "date": {{ post.date | date_to_xmlschema | jsonify }}
     }{%- unless forloop.last -%},{%- endunless -%}
   {%- endfor -%}
@@ -41,7 +42,7 @@ panel_includes: [activity-panel]
     <h2 class="ts-title-main mb-0">📚 오늘의 공부</h2>
     <span class="ts-sub ms-2" id="ts-date-label"></span>
   </div>
-  <p class="ts-desc">매일 자동으로 바뀌는 복습 4선 — 오늘은 이 글들을 읽어보세요.</p>
+  <p class="ts-desc">매일 자동으로 바뀌는 복습 6선 — Network · OS · Algorithm · Database 각 1편 + 랜덤 2편.</p>
   <div class="ts-grid" id="ts-grid"></div>
 </section>
 
@@ -233,12 +234,41 @@ panel_includes: [activity-panel]
       };
     }
     var rng = mulberry32(seed);
-    var pool = posts.slice();
-    for (var i = pool.length - 1; i > 0; i--) {
-      var j = Math.floor(rng() * (i + 1));
-      var tmp = pool[i]; pool[i] = pool[j]; pool[j] = tmp;
+
+    function shuffled(arr) {
+      var a = arr.slice();
+      for (var i = a.length - 1; i > 0; i--) {
+        var j = Math.floor(rng() * (i + 1));
+        var t = a[i]; a[i] = a[j]; a[j] = t;
+      }
+      return a;
     }
-    var picked = pool.slice(0, Math.min(4, pool.length));
+
+    /* 4개 핵심 시리즈 각 1편 고정 + 나머지 풀에서 랜덤 2편 = 총 6편 */
+    var FIXED = ['Network', 'OS', 'Algorithm', 'Database'];
+    var TOTAL = 6;
+    var byCat = {};
+    posts.forEach(function (p) {
+      var c = p.cat0 || '';
+      (byCat[c] = byCat[c] || []).push(p);
+    });
+
+    var picked = [];
+    var used = {};
+    FIXED.forEach(function (c) {
+      var list = byCat[c];
+      if (list && list.length) {
+        var chosen = shuffled(list)[0];
+        picked.push(chosen);
+        used[chosen.url] = true;
+      }
+    });
+
+    var rest = shuffled(posts.filter(function (p) { return !used[p.url]; }));
+    for (var k = 0; k < rest.length && picked.length < TOTAL; k++) {
+      picked.push(rest[k]);
+      used[rest[k].url] = true;
+    }
 
     var label = document.getElementById('ts-date-label');
     if (label) label.textContent = (now.getMonth() + 1) + '월 ' + now.getDate() + '일';

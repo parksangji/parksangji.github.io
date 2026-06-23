@@ -1,0 +1,86 @@
+---
+layout: page
+# The Category layout — 전 글을 한 목록으로 보여주되 클라이언트 사이드 12개씩 페이징
+---
+
+{% include lang.html %}
+
+<div id="page-category">
+  <h1 class="ps-lg-2">
+    <i class="far fa-folder-open fa-fw text-muted"></i>
+    {{ page.title }}
+    <span class="lead text-muted ps-2">{{ page.posts | size }}</span>
+  </h1>
+
+  <ul class="content ps-0" id="cat-post-list" data-per-page="12">
+    {% for post in page.posts %}
+      <li class="cat-post-item d-flex justify-content-between px-md-3">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <span class="dash flex-grow-1"></span>
+        {% include datetime.html date=post.date class='text-muted small text-nowrap' lang=lang %}
+      </li>
+    {% endfor %}
+  </ul>
+
+  <nav id="cat-pagination" class="d-flex flex-wrap justify-content-center mt-4" aria-label="Pagination"></nav>
+</div>
+
+<script>
+  (function () {
+    function init() {
+      var list = document.getElementById('cat-post-list');
+      var nav = document.getElementById('cat-pagination');
+      if (!list || !nav) return;
+      var per = parseInt(list.getAttribute('data-per-page'), 10) || 12;
+      var items = Array.prototype.slice.call(list.querySelectorAll('.cat-post-item'));
+      var pages = Math.ceil(items.length / per);
+      if (pages <= 1) return;
+      var current = 1;
+
+      function show(page) {
+        current = page;
+        var start = (page - 1) * per;
+        var end = start + per;
+        items.forEach(function (li, i) {
+          if (i >= start && i < end) {
+            li.style.removeProperty('display'); /* .d-flex(!important) 복원 */
+          } else {
+            li.style.setProperty('display', 'none', 'important'); /* .d-flex !important 이기기 */
+          }
+        });
+        build();
+        var top = document.getElementById('page-category');
+        if (top && top.scrollIntoView) top.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      function btn(label, page, active, disabled) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'btn btn-sm mx-1 mb-1 ' + (active ? 'btn-primary' : 'btn-outline-primary');
+        b.textContent = label;
+        if (disabled) {
+          b.disabled = true;
+        } else {
+          b.addEventListener('click', function () { show(page); });
+        }
+        return b;
+      }
+
+      function build() {
+        nav.innerHTML = '';
+        nav.appendChild(btn('‹', current - 1, false, current === 1));
+        for (var p = 1; p <= pages; p++) {
+          nav.appendChild(btn(String(p), p, p === current, false));
+        }
+        nav.appendChild(btn('›', current + 1, false, current === pages));
+      }
+
+      show(1);
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>

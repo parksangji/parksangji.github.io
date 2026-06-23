@@ -180,9 +180,10 @@ td.rouge-code {
   text-transform: uppercase;
   opacity: 0.55;
   margin: 0.4rem 0 0.5rem;
+  padding-left: 0.45rem; /* 홈/카테고리 항목(.cat-tree a)의 좌측 패딩과 동일하게 정렬 */
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.45rem;
 }
 #sidebar .cat-tree,
 #sidebar .cat-tree ul {
