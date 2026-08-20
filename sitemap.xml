@@ -1,0 +1,57 @@
+---
+permalink: /sitemap.xml
+layout: none
+sitemap: false
+---
+{%- comment -%}
+  커스텀 사이트맵.
+
+  jekyll-sitemap은 소스에 `/sitemap.xml` URL을 가진 페이지가 이미 있으면 자체 생성을
+  건너뛴다(jekyll-sitemap.rb 의 `file_exists?`). 그래서 이 파일이 기본 생성물을 대체한다.
+
+  기본 생성물과 달라진 점 — 아래 두 종류를 제외한다.
+    - jekyll-archives 태그 아카이브: 태그 1,332개 중 997개가 글 1편짜리 목록이라
+      원문의 복제본에 가깝다. 색인 대상으로 제출할 가치가 없다.
+    - 페이지네이션(/page2 ~ /page45): 목록의 조각이라 검색 유입 대상이 아니다.
+
+  결과: 1,794개 → 글 401 + 카테고리 + 탭 페이지.
+  두 종류는 `_includes/metadata-hook.html` 에서 noindex 도 함께 걸어둔다.
+{%- endcomment -%}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- comment -%} 컬렉션(posts + tabs). 태그·페이지네이션 URL 은 아래 조건으로 걸러낸다. {%- endcomment -%}
+{%- assign collections = site.collections | where_exp: 'c', 'c.output != false' -%}
+{%- for collection in collections -%}
+  {%- assign docs = collection.docs | where_exp: 'd', 'd.sitemap != false' -%}
+  {%- for doc in docs -%}
+    {%- assign url = doc.url -%}
+    {%- assign tags_prefix = url | slice: 0, 6 -%}
+    {%- assign page_prefix = url | slice: 0, 5 -%}
+    {%- if tags_prefix == '/tags/' or page_prefix == '/page' -%}
+      {%- continue -%}
+    {%- endif %}
+  <url>
+    <loc>{{ url | replace: '/index.html', '/' | absolute_url | xml_escape }}</loc>
+    {%- if doc.last_modified_at or doc.date %}
+    <lastmod>{{ doc.last_modified_at | default: doc.date | date_to_xmlschema }}</lastmod>
+    {%- endif %}
+  </url>
+  {%- endfor -%}
+{%- endfor -%}
+{%- comment -%} 일반 페이지 + jekyll-archives 카테고리 아카이브. 태그 아카이브는 type 으로 제외. {%- endcomment -%}
+{%- assign pages = site.html_pages | where_exp: 'p', 'p.sitemap != false' -%}
+{%- for p in pages -%}
+  {%- assign url = p.url -%}
+  {%- assign tags_prefix = url | slice: 0, 6 -%}
+  {%- assign page_prefix = url | slice: 0, 5 -%}
+  {%- if p.type == 'tag' or tags_prefix == '/tags/' or page_prefix == '/page' or url == '/404.html' -%}
+    {%- continue -%}
+  {%- endif %}
+  <url>
+    <loc>{{ url | replace: '/index.html', '/' | absolute_url | xml_escape }}</loc>
+    {%- if p.last_modified_at %}
+    <lastmod>{{ p.last_modified_at | date_to_xmlschema }}</lastmod>
+    {%- endif %}
+  </url>
+{%- endfor %}
+</urlset>

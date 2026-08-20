@@ -29,3 +29,21 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.google_adsense.id }}"
     crossorigin="anonymous"></script>
 {% endif %}
+
+{% comment %}
+  색인 대상이 아닌 페이지는 noindex,follow.
+
+  - 태그 아카이브: 1,332개 중 997개가 글 1편짜리 목록이라 원문의 복제본에 가깝다.
+  - 페이지네이션 2페이지 이후: 목록의 조각이라 검색 유입 대상이 아니다.
+
+  crawl 자체는 막지 않는다(robots.txt Disallow 금지) — 막으면 구글이 이 noindex 를
+  읽지 못한다. follow 를 유지해 내부 링크를 통한 글 발견 경로는 그대로 둔다.
+  사이트맵 제외는 루트 `sitemap.xml` 에서 같은 기준으로 처리한다.
+{% endcomment %}
+{% assign _url = page.url | default: '' %}
+{% assign _tags_prefix = _url | slice: 0, 6 %}
+{% if page.type == 'tag' or _tags_prefix == '/tags/' %}
+  <meta name="robots" content="noindex,follow">
+{% elsif paginator and paginator.page > 1 %}
+  <meta name="robots" content="noindex,follow">
+{% endif %}
